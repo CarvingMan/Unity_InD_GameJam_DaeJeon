@@ -75,6 +75,8 @@ public class PlayerControl : MonoBehaviour
         {
             m_vecMoveDirection.x = 0;
         }
+
+
     }
 
     // 애니메이션 관련 함수 -> 현재는 애니메이션이 없어 좌우 반전만 넣어놓음
