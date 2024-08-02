@@ -15,11 +15,13 @@ public abstract class InteractiveObject: MonoBehaviour
 
     public virtual void Interact()
     {
-        if (initialized == false)
-        {
-            Debug.LogError($"{this.gameObject.name} not initialized");
-            return;
-        }
+        //클릭할때 오류가 나서 우선은 주석처리 해 두었습니다!
+
+        //if (initialized == false)
+        //{
+        //    Debug.LogError($"{this.gameObject.name} not initialized");
+        //    return;
+        //}
 
         DoInteract();
     }
