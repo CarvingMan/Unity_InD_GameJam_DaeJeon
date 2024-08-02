@@ -98,13 +98,4 @@ public class SoundManager: Singleton<SoundManager>
 
         _effectSourcePool.Enqueue(source);
     }
-    
-    // Debug
-    private void OnGUI()
-    {
-        if (GUILayout.Button("Play"))
-        {
-            PlayEffect(SoundEffectEnum.Tick);
-        }
-    }
 }
