@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour
     float m_fMoveSpeed = 0.01f; //이동 속도
 
     //애니메이션 관련
-    //Animator m_PlayerAnimator = null; // 아직 없음
+    //Animator m_PlayerAnimator = null; // 아직 없음 
     SpriteRenderer m_spriteRenderer = null; //좌우 반전용
 
 
