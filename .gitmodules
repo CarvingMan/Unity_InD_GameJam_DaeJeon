@@ -1,0 +1,3 @@
+[submodule "Submodules/EshikivoGDTool"]
+	path = Submodules/EshikivoGDTool
+	url = git@github.com:jsedwardyou/EshikivoGDTool.git
