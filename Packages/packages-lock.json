@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.eshikivo.tool": {
-      "version": "file:../Submodules/EshikivoGDTool",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.2d.animation": {
       "version": "9.1.0",
       "depth": 1,
