@@ -16,6 +16,10 @@ public class PlayerMouseController : MonoBehaviour
     private void FixedUpdate()
     {
         HandleHover();
+    }
+
+    private void Update()
+    {
         HandleClick();
     }
 

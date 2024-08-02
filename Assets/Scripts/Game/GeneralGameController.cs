@@ -18,6 +18,10 @@ public class GeneralGameController: MonoBehaviour
         {
             return;
         }
+
+        var interactiveObj = hit.collider.GetComponent<InteractiveObject>();
+        if (interactiveObj == null) return;
+        interactiveObj.Interact();
     }
 
     private void OnMouseHover(RaycastHit2D hit)

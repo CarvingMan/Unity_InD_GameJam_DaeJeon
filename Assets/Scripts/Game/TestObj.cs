@@ -6,7 +6,7 @@ namespace Game
     {
         protected override void DoInteract()
         {
-            
+            Debug.Log("INTERACT!!!");
         }
 
         public override void OnMouseHoverEnter()
