@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
     void InputProcess()
     {
         bool isRightKey = Input.GetKey(KeyCode.D);
-        bool isLeftKey = Input
+        // bool isLeftKey = Input
     }
 
     void Move()
