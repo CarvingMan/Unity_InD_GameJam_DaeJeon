@@ -5,7 +5,7 @@ using UnityEngine;
 public class StageController: MonoBehaviour
 {
     private Dictionary<string, object> _stateDict = new();
-    
+
     public void StartStage()
     {
         // TODO: Timer 설정, 게임 세팅, 기타 등등
@@ -51,4 +51,6 @@ public class StageController: MonoBehaviour
 
         return value;
     }
+
+    
 }

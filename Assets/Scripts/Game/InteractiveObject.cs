@@ -32,4 +32,12 @@ public abstract class InteractiveObject: MonoBehaviour
     }
     
     protected abstract void DoInteract();
+
+    public virtual void OnMouseHoverEnter()
+    {
+    }
+
+    public virtual void OnMouseHoverExit()
+    {
+    }
 }
