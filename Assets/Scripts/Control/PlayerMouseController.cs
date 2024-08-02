@@ -30,7 +30,9 @@ public class PlayerMouseController : MonoBehaviour
         
         var mousePosition = Input.mousePosition;
         var ray = camera.ScreenPointToRay(mousePosition);
-        var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction);
+        //레이어 마스크로 props 레이어만 맞추도록 설정
+        int nLayerMask = 1 << LayerMask.NameToLayer("Props"); 
+        var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f,nLayerMask);
         OnMouseHover?.Invoke(raycastHit2D);
 
         _timer = 0;
@@ -42,7 +44,9 @@ public class PlayerMouseController : MonoBehaviour
         {
             var mousePosition = Input.mousePosition;
             var ray = camera.ScreenPointToRay(mousePosition);
-            var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction);
+            //레이어 마스크로 props 레이어만 맞추도록 설정
+            int nLayerMask = 1 << LayerMask.NameToLayer("Props");
+            var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f, nLayerMask);
             OnMouseClick?.Invoke(raycastHit2D);
         }
     }
