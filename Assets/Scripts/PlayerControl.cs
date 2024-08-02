@@ -4,35 +4,99 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    //PlayerControl 기준
+
+
+
     //이동관련//
     Vector2 m_vecMoveDirection = Vector2.zero;
-    const float m_fSpeed = 0.01f;
-    SpriteRenderer m_spriteRenderer; //좌우 반전용
-    bool m_isLookLeft = false;
-
     
+    [SerializeField, Range(0.01f, 0.1f)]
+    float m_fMoveSpeed = 0.01f; //이동 속도
+
+    //애니메이션 관련
+    //Animator m_PlayerAnimator = null; // 아직 없음
+    SpriteRenderer m_spriteRenderer = null; //좌우 반전용
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (m_spriteRenderer == null)
+        {
+            m_spriteRenderer = GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        InputProcess();
+    }
+
+    private void LateUpdate()
+    {
+        SetAnimation();
+    }
+
+    private void FixedUpdate()
+    {
+        transform.Translate(m_vecMoveDirection * m_fMoveSpeed);
     }
 
     //입력관련 메소드
     void InputProcess()
     {
+        //좌우 이동 키
         bool isRightKey = Input.GetKey(KeyCode.D);
-        // bool isLeftKey = Input
+        bool isLeftKey = Input.GetKey(KeyCode.A);
+        // 입력받은 키로 Move() 함수 호출
+        Move(isRightKey, isLeftKey);
     }
 
-    void Move()
+    //m_vecMoveDirection(이동방향) 결정함수 -> 실제 이동은 FixedUpdate에서 이동
+    void Move(bool isRightKey, bool isLeftKey)
+    {
+        if (isRightKey)
+        {
+            m_vecMoveDirection.x = 1;
+        }
+        else if (isLeftKey)
+        {
+            m_vecMoveDirection.x = -1;
+            
+        }
+        else
+        {
+            m_vecMoveDirection.x = 0;
+        }
+    }
+
+    // 애니메이션 관련 함수 -> 현재는 애니메이션이 없어 좌우 반전만 넣어놓음
+    void SetAnimation()
     {
 
+
+        // 좌우 스프라이트 반전
+        if(m_spriteRenderer != null)
+        {
+            //m_vecDirectoion.x가 양수면 오른쪽 이동, 음수면 왼쪽이동
+            if (m_vecMoveDirection.x > 0)
+            {
+                m_spriteRenderer.flipX = false; 
+            }
+            else if(m_vecMoveDirection.x < 0)
+            {
+                m_spriteRenderer.flipX = true; //왼쪽 이동시 좌우반전
+            }
+            else
+            {
+                //속도가 0 일 때에는 이전 상태 유지
+            }
+        }
+        else
+        {
+            Debug.LogError("m_spriteRenderer이 없습니다.");
+        }
     }
 }
