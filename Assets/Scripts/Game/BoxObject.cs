@@ -5,28 +5,43 @@ using UnityEngine;
 
 public class BoxObject : InteractiveObject
 {
-    // 상자_0 = 열린거, 상자_1 = 상자 열린거에 책 있는 상태 , 상자_2 = 상자 닫혀 있는거
+    public Sprite box1Sprite; // 책이 있는 상자 스프라이트
+    public Sprite box2Sprite; // 닫힌 상자 스프라이트
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>(); // 스프라이트 렌더러 초기화
+
+        // StageController를 찾고 초기화
+        StageController stageController = FindObjectOfType<StageController>();
+        if (stageController != null)
+        {
+            Initialize(stageController); // 초기화 메소드 호출
+        }
+        else
+        {
+            Debug.LogError("StageController not found!");
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        Interact(); // 클릭 시 상호작용 메소드 호출
+    }
+
     protected override void DoInteract()
     {
-        if (isInteractable == false)
+        if (!isInteractable) // 상자가 상호작용이 가능 한지?
         {
             Debug.Log("상자가 연다");
-
-
+            isInteractable = true;
+            spriteRenderer.sprite = box1Sprite; // 상자_1 스프라이트로 변경             
         }
         else
         {
-            Debug.Log("상자가 이미 열려 있다.");
-        }
+            Debug.Log("상자가 열려 있다.");
 
-        //상자가 열린 상태
-        if (isInteracted == true)
-        {
-            Debug.Log("상자 안에 일기장을 클릭 가능");
-        }
-        else
-        {
-            Debug.Log("상자 안에 ");
         }
     }
 }
