@@ -1,17 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Febucci.UI;
+using TMPro;
 using UnityEngine;
+
+[Serializable]
+public class Dialogue
+{
+    public string name;
+    public string dialogue;
+}
 
 public class DialogueUIController : MonoBehaviour
 {
     [SerializeField] private GameObject content;
     [SerializeField] private TextAnimator_TMP textAnimator;
+    [SerializeField] private TextMeshProUGUI nameText;
 
-    private string[] _textsToShow;
+    private Dialogue[] _textsToShow;
     private int _dialogueIndex = 0;
     
-    public void ShowDialogue(string[] texts)
+    public void ShowDialogue(Dialogue[] texts)
     {
         _textsToShow = texts;
         
@@ -54,7 +64,17 @@ public class DialogueUIController : MonoBehaviour
 
     private void SetCurrentText()
     {
-        string text = _textsToShow[_dialogueIndex];
-        textAnimator.SetText(text);
+        var dialogue = _textsToShow[_dialogueIndex];
+        if (string.IsNullOrEmpty(dialogue.name))
+        {
+            nameText.gameObject.SetActive(false);
+        }
+        else
+        {
+            nameText.text = dialogue.name;
+            nameText.gameObject.SetActive(true);
+        }
+
+        textAnimator.SetText(dialogue.dialogue);
     }
 }
