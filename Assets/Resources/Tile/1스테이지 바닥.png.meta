@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ebe983fcbfc7744b8fc0a68859c3b83
+guid: 5876cac9f9b6d3344a02abc83918801e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "4stage_\uB098\uBE44_0"
+      name: "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a8482305d7ecde41be9887d29c6d202
-      internalID: 1062175076
+      spriteID: fcd65348e7fd9e546ba7245e652d75cd
+      internalID: 1011607157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "4stage_\uB098\uBE44_1"
+      name: "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_1"
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a112e6c3e35cdc943a4970027d9f2622
-      internalID: -1812195068
+      spriteID: b9cf7b7b38a1047438cd57401ebdf0b4
+      internalID: -411436670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "4stage_\uB098\uBE44_2"
+      name: "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_2"
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4240bc3b42a76e648bac4da483873522
-      internalID: -158610992
+      spriteID: 26268d916afccd140a5e959bcd13a7f1
+      internalID: 589807168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "4stage_\uB098\uBE44_3"
+      name: "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_3"
       rect:
         serializedVersion: 2
         x: 96
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f95c6c2e24978745b46d1332ef018cd
-      internalID: 1292929525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "4stage_\uB098\uBE44_4"
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f88e1d2479716f44fb8b6b0771e2c6b6
-      internalID: 2053572392
+      spriteID: c9bafedc3021e7e4cac53169ac6943e2
+      internalID: -895311479
       vertices: []
       indices: 
       edges: []
@@ -217,7 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ccded86224156b244bff8d95cd67ef0e
     internalID: 0
     vertices: []
     indices: 
@@ -225,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "4stage_\uB098\uBE44_0": 1062175076
-      "4stage_\uB098\uBE44_1": -1812195068
-      "4stage_\uB098\uBE44_2": -158610992
-      "4stage_\uB098\uBE44_3": 1292929525
-      "4stage_\uB098\uBE44_4": 2053572392
+      "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_0": 1011607157
+      "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_1": -411436670
+      "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_2": 589807168
+      "1\uC2A4\uD14C\uC774\uC9C0 \uBC14\uB2E5_3": -895311479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

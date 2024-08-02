@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour
     float m_fMoveSpeed = 0.01f; //이동 속도
 
     //애니메이션 관련
-    //Animator m_PlayerAnimator = null; // 아직 없음 
+    Animator m_PlayerAnimator = null; // 아직 없음 
     SpriteRenderer m_spriteRenderer = null; //좌우 반전용
 
 
@@ -25,6 +25,11 @@ public class PlayerControl : MonoBehaviour
         if (m_spriteRenderer == null)
         {
             m_spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if(m_PlayerAnimator == null)
+        {
+            m_PlayerAnimator = GetComponent<Animator>();
         }
     }
 
@@ -75,7 +80,23 @@ public class PlayerControl : MonoBehaviour
     // 애니메이션 관련 함수 -> 현재는 애니메이션이 없어 좌우 반전만 넣어놓음
     void SetAnimation()
     {
-
+        //플레이어 이동 애니매이션
+        if(m_PlayerAnimator != null)
+        {
+            //m_vecMoveDirection.x(x축 이동방향)이 0이 아니면 이동중
+            if(m_vecMoveDirection.x != 0)
+            {
+                m_PlayerAnimator.SetBool("isWalk", true); //애니메이터 파라미터 설정
+            }
+            else
+            {
+                m_PlayerAnimator.SetBool("isWalk", false);
+            }
+        }
+        else
+        {
+            Debug.LogError("m_PlayerAnimator가 없습니다.");
+        }
 
         // 좌우 스프라이트 반전
         if(m_spriteRenderer != null)
@@ -83,11 +104,11 @@ public class PlayerControl : MonoBehaviour
             //m_vecDirectoion.x가 양수면 오른쪽 이동, 음수면 왼쪽이동
             if (m_vecMoveDirection.x > 0)
             {
-                m_spriteRenderer.flipX = false; 
+                m_spriteRenderer.flipX = true; 
             }
             else if(m_vecMoveDirection.x < 0)
             {
-                m_spriteRenderer.flipX = true; //왼쪽 이동시 좌우반전
+                m_spriteRenderer.flipX = false; 
             }
             else
             {
