@@ -10,6 +10,7 @@ public class Timer: MonoBehaviour
     public Action<float> OnTimerStart;
     public Action OnTimerStop;
     public Action<float, float> OnTimerUpdate;
+    public Action<bool> OnTimerToggle;
 
     private void FixedUpdate()
     {
@@ -31,6 +32,12 @@ public class Timer: MonoBehaviour
 
         _isActive = true;
         OnTimerStart?.Invoke(targetTimeSec);
+    }
+
+    public void ToggleTimer()
+    {
+        _isActive = !_isActive;
+        OnTimerToggle?.Invoke(_isActive);
     }
 
     public void StopTimer()
