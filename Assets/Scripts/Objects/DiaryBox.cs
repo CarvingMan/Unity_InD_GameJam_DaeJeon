@@ -9,6 +9,15 @@ namespace Game
         [SerializeField]
         GameObject m_objTextBox = null;
 
+
+        //박스가 열렸을때
+        bool m_isBoxOpen = false;
+
+        [SerializeField]
+        Sprite m_spOpenBox = null;
+
+
+
         private void Start()
         {
             if(m_objTextBox != null)
