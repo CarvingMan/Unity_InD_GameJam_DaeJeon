@@ -10,7 +10,7 @@ public class password : MonoBehaviour
     [SerializeField]
     private Image[] objects; // ������Ʈ �迭
     private int[] passwordArray; // �н����� �迭
-    private int[] correctPassword = { 1, 0, 1, 0, 1, 0, 1, 0 }; // ���� �迭 �ʱ�ȭ
+    private int[] correctPassword = { 1, 1, 0, 1, 0, 0, 0, 1 }; // ���� �迭 �ʱ�ȭ
     [SerializeField]
     private Lock lockObject; // Lock ��ũ��Ʈ�� ���� ������Ʈ
     
