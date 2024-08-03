@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7717108056922016762}
   - component: {fileID: 5370352023165357241}
   - component: {fileID: 4989135074267076687}
+  - component: {fileID: 9119116177601544394}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -145,8 +146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC548\uB155\uD558\uC138\uC694! \uC774\uAC74 \uB2E4\uC774\uC5BC\uB85C\uADF8
-    \uCC3D\uC774\uC5D0\uC694..."
+  m_text: "\uB0B4\uAC00 \uC798 \uBABB \uBCF4\uACE0 \uC788\uB294\uAC74\uAC00...? "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c8e16264c7204d799bfdc4c1fd63df0, type: 2}
   m_sharedMaterial: {fileID: 5681468697229991722, guid: 0c8e16264c7204d799bfdc4c1fd63df0, type: 2}
@@ -229,23 +229,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typewriterStartsAutomatically: 0
   animationLoop: 0
-  timeScale: 0
-  _text: 
+  timeScale: 1
+  _text: "\uC548\uB155\uD558\uC138\uC694! \uC774\uAC74 \uB2E4\uC774\uC5BC\uB85C\uADF8
+    \uCC3D\uC774\uC5D0\uC694..."
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
   useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 0}
-  databaseAppearances: {fileID: 0}
+  databaseBehaviors: {fileID: 11400000, guid: 78d973e99d9c94beea68bf1678ff79f3, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: 6cf7f4610f8ab410ebac46cb2fdfe255, type: 2}
   useDefaultStyleSheet: 1
   styleSheet: {fileID: 0}
-  databaseActions: {fileID: 0}
-  defaultAppearancesTags:
-  - size
+  databaseActions: {fileID: 11400000, guid: 8f26698efe5af43ae9ec06e3357f3ae4, type: 2}
+  defaultAppearancesTags: []
   defaultDisappearancesTags:
   - fade
   defaultBehaviorsTags: []
   defaultTagsMode: 0
+--- !u!114 &9119116177601544394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365243913887283034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a6945b90dcd0c4b81619c0d8b5c283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useTypeWriter: 1
+  startTypewriterMode: 3
+  hideAppearancesOnSkip: 0
+  hideDisappearancesOnSkip: 0
+  triggerEventsOnSkip: 0
+  resetTypingSpeedAtStartup: 1
+  disappearanceOrientation: 0
+  onTextShowed:
+    m_PersistentCalls:
+      m_Calls: []
+  onTypewriterStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onTextDisappeared:
+    m_PersistentCalls:
+      m_Calls: []
+  onCharacterVisible:
+    m_PersistentCalls:
+      m_Calls: []
+  onMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  waitForNormalChars: 0.03
+  waitLong: 0.6
+  waitMiddle: 0.2
+  avoidMultiplePunctuactionWait: 0
+  waitForNewLines: 1
+  waitForLastCharacter: 1
+  useTypewriterWaitForDisappearances: 1
+  disappearanceWaitTime: 0.015
+  disappearanceSpeedMultiplier: 1
 --- !u!1 &3766187412879874438
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7009744590845645349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -736,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 3766187412879874438}
-  textAnimator: {fileID: 4989135074267076687}
+  textAnimator: {fileID: 9119116177601544394}
   nameText: {fileID: 661292621736229894}
 --- !u!1 &8018103297284516107
 GameObject:

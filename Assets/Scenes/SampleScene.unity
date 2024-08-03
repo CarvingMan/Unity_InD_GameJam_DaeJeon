@@ -665,54 +665,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1895768687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2365243913887283034, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-  m_PrefabInstance: {fileID: 8098845803853840840}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1895768692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895768687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a6945b90dcd0c4b81619c0d8b5c283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useTypeWriter: 1
-  startTypewriterMode: 3
-  hideAppearancesOnSkip: 0
-  hideDisappearancesOnSkip: 0
-  triggerEventsOnSkip: 0
-  resetTypingSpeedAtStartup: 1
-  disappearanceOrientation: 0
-  onTextShowed:
-    m_PersistentCalls:
-      m_Calls: []
-  onTypewriterStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onTextDisappeared:
-    m_PersistentCalls:
-      m_Calls: []
-  onCharacterVisible:
-    m_PersistentCalls:
-      m_Calls: []
-  onMessage:
-    m_PersistentCalls:
-      m_Calls: []
-  waitForNormalChars: 0.03
-  waitLong: 0.6
-  waitMiddle: 0.2
-  avoidMultiplePunctuactionWait: 0
-  waitForNewLines: 1
-  waitForLastCharacter: 1
-  useTypewriterWaitForDisappearances: 1
-  disappearanceWaitTime: 0.015
-  disappearanceSpeedMultiplier: 1
 --- !u!1001 &8098845803853840840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,63 +753,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3766187412879874438, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: _text
-      value: "\uC548\uB155\uD558\uC138\uC694! \uC774\uAC74 \uB2E4\uC774\uC5BC\uB85C\uADF8
-        \uCC3D\uC774\uC5D0\uC694..."
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: timeScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: databaseActions
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f26698efe5af43ae9ec06e3357f3ae4, type: 2}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: databaseBehaviors
-      value: 
-      objectReference: {fileID: 11400000, guid: 78d973e99d9c94beea68bf1678ff79f3, type: 2}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: databaseAppearances
-      value: 
-      objectReference: {fileID: 11400000, guid: 6cf7f4610f8ab410ebac46cb2fdfe255, type: 2}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: defaultAppearancesTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: defaultAppearancesTags.Array.data[0]
-      value: fade
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989135074267076687, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: defaultAppearancesTags.Array.data[1]
-      value: fade
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370352023165357241, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: m_text
-      value: "\uB0B4\uAC00 \uC798 \uBABB \uBCF4\uACE0 \uC788\uB294\uAC74\uAC00...? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 5370352023165357241, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 0c8e16264c7204d799bfdc4c1fd63df0, type: 2}
-    - target: {fileID: 5370352023165357241, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5681468697229991722, guid: 0c8e16264c7204d799bfdc4c1fd63df0, type: 2}
-    - target: {fileID: 5370352023165357241, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6284319289077715478, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      propertyPath: textAnimator
-      value: 
-      objectReference: {fileID: 1895768692}
     - target: {fileID: 7937545814018602985, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
       propertyPath: m_Name
       value: DialgoueUI
@@ -865,10 +760,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2365243913887283034, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1895768692}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cb24866d43ba402c8e3506334c8b72c, type: 3}
 --- !u!224 &8098845803853840841 stripped
 RectTransform:
