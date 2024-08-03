@@ -43,16 +43,21 @@ public class BoxDiaryWindow : InteractiveObject
         {
             m_csPlayerControl = FindObjectOfType<PlayerControl>();
         }
+
+        
     }
 
     //클릭시 Diary Canvas Active
     protected override void DoInteract()
     {
-
         if (m_nIndex + 1 <= m_nMaxIndex) //이번이 마지막 스프라이트가 아닐 시
         {
             m_nIndex++; // 인덱스 증가
             m_spriteRenderer.sprite = m_lstSprites[m_nIndex]; // 이미지 소스 변경
+            if (m_nIndex == m_nMaxIndex)
+            {
+                m_objDiaryTextPanel?.SetActive(true);
+            }
         }
         else //마지막 스프라이트일 시
         {
