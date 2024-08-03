@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
 
 
     //이동관련//
+    bool m_isStop = false;
     Vector2 m_vecMoveDirection = Vector2.zero;
     
     [SerializeField, Range(0.01f, 0.1f)]
@@ -62,18 +63,25 @@ public class PlayerControl : MonoBehaviour
     //m_vecMoveDirection(이동방향) 결정함수 -> 실제 이동은 FixedUpdate에서 이동
     void Move(bool isRightKey, bool isLeftKey)
     {
-        if (isRightKey)
+        if (m_isStop)
         {
-            m_vecMoveDirection.x = 1;
-        }
-        else if (isLeftKey)
-        {
-            m_vecMoveDirection.x = -1;
-            
+            m_vecMoveDirection.x = 0;
         }
         else
         {
-            m_vecMoveDirection.x = 0;
+            if (isRightKey)
+            {
+                m_vecMoveDirection.x = 1;
+            }
+            else if (isLeftKey)
+            {
+                m_vecMoveDirection.x = -1;
+
+            }
+            else
+            {
+                m_vecMoveDirection.x = 0;
+            }
         }
 
 
@@ -121,5 +129,11 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.LogError("m_spriteRenderer이 없습니다.");
         }
+    }
+
+    //플레이어 멈출때 사용하는 함수
+    public void SetPlayerStop(bool isStop)
+    {
+        m_isStop = isStop;
     }
 }
