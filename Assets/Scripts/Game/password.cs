@@ -13,13 +13,26 @@ public class password : MonoBehaviour
     private int[] correctPassword = { 1, 0, 1, 0, 1, 0, 1, 0 }; // 정답 배열 초기화
     [SerializeField]
     private Lock lockObject; // Lock 스크립트를 가진 오브젝트
+    
     [SerializeField]
     private GameObject lockCloset; // LockCloset 오브젝트 참조
+
+    [SerializeField]
+    GameObject lockClosetobject;
 
     private void Start()
     {
         // 패스워드 배열 초기화
         passwordArray = new int[objects.Length];
+
+        if (lockClosetobject != null)
+        {
+            lockClosetobject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("lockClosetobject가 없습니다.");
+        }
 
         // 배열에 있는 각 오브젝트에 클릭 이벤트를 등록합니다.
         foreach (GameObject obj in objects)
@@ -96,6 +109,7 @@ public class password : MonoBehaviour
 
             // LockCloset의 이미지 변경
             ChangeLockClosetImage();
+            lockClosetobject.SetActive(true);
         }
         else
         {
