@@ -1064,6 +1064,7 @@ MonoBehaviour:
   - {fileID: 500795896}
   lockObject: {fileID: 1591798280}
   lockCloset: {fileID: 1591798275}
+  lockClosetobject: {fileID: 486470275}
 --- !u!1 &215334471
 GameObject:
   m_ObjectHideFlags: 0
