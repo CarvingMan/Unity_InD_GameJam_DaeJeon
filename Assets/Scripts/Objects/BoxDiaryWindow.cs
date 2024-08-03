@@ -45,6 +45,8 @@ public class BoxDiaryWindow : InteractiveObject
         var stageController = FindObjectOfType<StageController>();
         if (stageController == null) return;
         
+        m_csPlayerControl.SetPlayerStop(false);
+
         stageController.UpdateDiaryFound("box");
     }
 }
