@@ -122,8 +122,13 @@ public class StageController: MonoBehaviour
 
     private void HandleStage2Clear()
     {
-        // TODO: 고양이 울기
-        // TODO: 고양이 창이 생기기?
+        // SoundManager.Instance.PlayEffect(SoundEffectEnum.Tick);
+        
+        // TODO: 카메라가 -> 포커스를 창가로 움직이고
+        // TODO: Dotween 써서 알파 값 바꾸는거 -> 창이 나와서
+        // TODO: 고양이 창이 생기기
+        // TODO: 고양이 창 누르면 => 확대창 (UI)
+        
     }
 
 }
