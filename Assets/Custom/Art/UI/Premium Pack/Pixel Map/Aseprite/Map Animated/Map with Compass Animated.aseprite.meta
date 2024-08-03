@@ -1,0 +1,2323 @@
+fileFormatVersion: 2
+guid: 75caa69bcd1954a3b98cd267ab4815ca
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Map with Compass Animated_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 512
+      height: 336
+    spriteID: afd8dd8ea299b4ee4ba9e4466b083b83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Map with Compass Animated_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 348
+      width: 512
+      height: 336
+    spriteID: e5d5fd48275744b2b83c7ff1092b851c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 348}
+  - name: Map with Compass Animated_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 692
+      width: 512
+      height: 336
+    spriteID: 5515210f76c5c460eb11fbcdae056710
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 692}
+  - name: Map with Compass Animated_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1036
+      width: 512
+      height: 336
+    spriteID: cec1392ae4e574de9a16ddc898fbee28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1036}
+  - name: Map with Compass Animated_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1380
+      width: 512
+      height: 336
+    spriteID: f438efa668d7840e9b751d7f337d866c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1380}
+  - name: Map with Compass Animated_Frame_46
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1724
+      width: 512
+      height: 336
+    spriteID: 9f0bbe812f4f84f589176f992a21da4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1724}
+  - name: Map with Compass Animated_Frame_48
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2068
+      width: 512
+      height: 336
+    spriteID: 640cf03473f8049d9af6134b6e6207b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2068}
+  - name: Map with Compass Animated_Frame_54
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2412
+      width: 512
+      height: 336
+    spriteID: 71eb4daba97fc4bf394ff4513e4abe5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2412}
+  - name: Map with Compass Animated_Frame_55
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2756
+      width: 512
+      height: 336
+    spriteID: 86faa1d0a07ad4271b3059838beb9bd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2756}
+  - name: Map with Compass Animated_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3100
+      width: 512
+      height: 336
+    spriteID: cf1fa895a3d464f7b9d04916e60fb894
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3100}
+  - name: Map with Compass Animated_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3444
+      width: 512
+      height: 336
+    spriteID: b658217307c0f4ff8ae2a97eb9922f80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3444}
+  - name: Map with Compass Animated_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3788
+      width: 512
+      height: 336
+    spriteID: ab37388a9c4e84dd4babe310d368899f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3788}
+  - name: Map with Compass Animated_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4132
+      width: 512
+      height: 336
+    spriteID: 767603c34d4224196a5a08e8bd908217
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4132}
+  - name: Map with Compass Animated_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4476
+      width: 512
+      height: 336
+    spriteID: 74553d9c6fa614a2eb6dcd8044063e2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4476}
+  - name: Map with Compass Animated_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4820
+      width: 512
+      height: 336
+    spriteID: d93d7ca696f704a37b0aefa58a0a3580
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4820}
+  - name: Map with Compass Animated_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5164
+      width: 512
+      height: 336
+    spriteID: c0c3d72e5abfa45aa8c3394bd15dcac1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5164}
+  - name: Map with Compass Animated_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5508
+      width: 512
+      height: 336
+    spriteID: c69b7cde569f44584a77f330a99c296f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5508}
+  - name: Map with Compass Animated_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5852
+      width: 512
+      height: 336
+    spriteID: 29e12e338df45448ca820955babea88e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5852}
+  - name: Map with Compass Animated_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6196
+      width: 512
+      height: 336
+    spriteID: 2864973520114414986db0f272ab593e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6196}
+  - name: Map with Compass Animated_Frame_45
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6540
+      width: 512
+      height: 336
+    spriteID: dec01256cec8c47cc9e5d3c889001b0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6540}
+  - name: Map with Compass Animated_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6884
+      width: 512
+      height: 336
+    spriteID: 48f1ca3ece4e74a58917792efbcf4e38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6884}
+  - name: Map with Compass Animated_Frame_50
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7228
+      width: 512
+      height: 336
+    spriteID: bd5616e9d8b0c4a37a5be79549cf46b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7228}
+  - name: Map with Compass Animated_Frame_51
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7572
+      width: 512
+      height: 336
+    spriteID: 22271f219e70a48b5838af0104f820c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7572}
+  - name: Map with Compass Animated_Frame_52
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 4
+      width: 512
+      height: 336
+    spriteID: 526cb05ac73974251a6165fe985f94fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 4}
+  - name: Map with Compass Animated_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 348
+      width: 512
+      height: 336
+    spriteID: f68243d937fca4aaeb514a9eab48f92a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 348}
+  - name: Map with Compass Animated_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 692
+      width: 512
+      height: 336
+    spriteID: 69d3cc663e33c46a2946eac1b01b1cd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 692}
+  - name: Map with Compass Animated_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 1036
+      width: 512
+      height: 336
+    spriteID: 8000a0dd7e1244886bc17aec7c75903c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 1036}
+  - name: Map with Compass Animated_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 1380
+      width: 512
+      height: 336
+    spriteID: ee9d73832e94b4cdf82160bd71669032
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 1380}
+  - name: Map with Compass Animated_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 1724
+      width: 512
+      height: 336
+    spriteID: ff74feb0c17e7424ca1084b49bacee0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 1724}
+  - name: Map with Compass Animated_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 2068
+      width: 512
+      height: 336
+    spriteID: a45fc7192b3964c34ad5c035f1199571
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 2068}
+  - name: Map with Compass Animated_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 2412
+      width: 512
+      height: 336
+    spriteID: d4c3fe76130d34891ab121e4ca2769ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 2412}
+  - name: Map with Compass Animated_Frame_59
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 2756
+      width: 512
+      height: 336
+    spriteID: db77df46e03964308be503ef2b7a3381
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 2756}
+  - name: Map with Compass Animated_Frame_60
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 3100
+      width: 512
+      height: 336
+    spriteID: bb60e8380977b41b28512af8f0924b90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 3100}
+  - name: Map with Compass Animated_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 3444
+      width: 512
+      height: 336
+    spriteID: 8bd6f2f660266462eb2382d331314cfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 3444}
+  - name: Map with Compass Animated_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 3788
+      width: 512
+      height: 336
+    spriteID: eca0625fc228d4c9ea07e5546f4f2130
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 3788}
+  - name: Map with Compass Animated_Frame_61
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 4132
+      width: 512
+      height: 336
+    spriteID: 9b886fbeb5bba431bae3111b3a4e4269
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 4132}
+  - name: Map with Compass Animated_Frame_62
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 4476
+      width: 512
+      height: 336
+    spriteID: db7efa91256ce482e8ea6089036d7ff2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 4476}
+  - name: Map with Compass Animated_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 4820
+      width: 512
+      height: 336
+    spriteID: a305d7a67f90e41309718dfa11a57422
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 4820}
+  - name: Map with Compass Animated_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 5164
+      width: 512
+      height: 336
+    spriteID: c76e08b2d3eda4c0a9dc1422a6c4b72f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 5164}
+  - name: Map with Compass Animated_Frame_63
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 5508
+      width: 512
+      height: 336
+    spriteID: 2e84958e21063409badda9a63ac43f4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 5508}
+  - name: Map with Compass Animated_Frame_64
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 5852
+      width: 512
+      height: 336
+    spriteID: fde1dd2d0def6492388b83f86011afe7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 5852}
+  - name: Map with Compass Animated_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 6196
+      width: 512
+      height: 336
+    spriteID: c4ea1418e5a5b41f0983482209d426e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 6196}
+  - name: Map with Compass Animated_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 6540
+      width: 512
+      height: 336
+    spriteID: 27bd98cf29dd44899ad3f2b0b3734d89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 6540}
+  - name: Map with Compass Animated_Frame_65
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 6884
+      width: 512
+      height: 336
+    spriteID: 4e771805c2b7c405db5b930786c7e7c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 6884}
+  - name: Map with Compass Animated_Frame_66
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 7228
+      width: 512
+      height: 336
+    spriteID: c715b3233f84044b0abdb3749e5d16dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 7228}
+  - name: Map with Compass Animated_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 7572
+      width: 512
+      height: 336
+    spriteID: c3d5e7082c06645acb2cfd8219353049
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 524, y: 7572}
+  - name: Map with Compass Animated_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4
+      width: 512
+      height: 336
+    spriteID: adcc8cb170ca4439485d6155f1f553c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 4}
+  - name: Map with Compass Animated_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 348
+      width: 512
+      height: 336
+    spriteID: a4827df0d44f64f068480978e1a4ee42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 348}
+  - name: Map with Compass Animated_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 692
+      width: 512
+      height: 336
+    spriteID: 775b07254dd0e4ad1b5b255a153b1d7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 692}
+  - name: Map with Compass Animated_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 1036
+      width: 512
+      height: 336
+    spriteID: 3ccd5f5abc8c84c7c8a53a1bbf88e056
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 1036}
+  - name: Map with Compass Animated_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 1380
+      width: 512
+      height: 336
+    spriteID: 053f74a87bdaf4ee39c87fa4028b8205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 1380}
+  - name: Map with Compass Animated_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 1724
+      width: 512
+      height: 336
+    spriteID: b6b6591fbbe5e448bb14e4cddc50e53e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 1724}
+  - name: Map with Compass Animated_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 2068
+      width: 512
+      height: 336
+    spriteID: 63309b29bb66c448d868a834a9143820
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 2068}
+  - name: Map with Compass Animated_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 2412
+      width: 512
+      height: 336
+    spriteID: 62b91dfd91e9a4a88b9c2ced8444aeec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 2412}
+  - name: Map with Compass Animated_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 2756
+      width: 512
+      height: 336
+    spriteID: 046a193631b504c15a9470d82d9acb64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 2756}
+  - name: Map with Compass Animated_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 3100
+      width: 512
+      height: 336
+    spriteID: eabc022a979fd43ddb9d4d7319734d13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 3100}
+  - name: Map with Compass Animated_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 3444
+      width: 512
+      height: 336
+    spriteID: 379804ad76dac4b0fa0e3a4207c20228
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 3444}
+  - name: Map with Compass Animated_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 3788
+      width: 512
+      height: 336
+    spriteID: d1dd0bb37cb114a2ba80864eb4ad0c0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 3788}
+  - name: Map with Compass Animated_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4132
+      width: 512
+      height: 336
+    spriteID: cc7154419f19946f4b1785416ff2ce7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 4132}
+  - name: Map with Compass Animated_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4476
+      width: 512
+      height: 336
+    spriteID: 347f02fbe0baf4583947ac86e9038d47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 4476}
+  - name: Map with Compass Animated_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4820
+      width: 512
+      height: 336
+    spriteID: efab02d8fbedd433fa2996b23086aaae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 4820}
+  - name: Map with Compass Animated_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 5164
+      width: 512
+      height: 336
+    spriteID: 84611fc493dcf4abc9308ae8039f42d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 5164}
+  - name: Map with Compass Animated_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 5508
+      width: 512
+      height: 336
+    spriteID: bf3403111fb584f83bb377f0c5f45c2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 5508}
+  - name: Map with Compass Animated_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 5852
+      width: 512
+      height: 336
+    spriteID: 7cfcf514c7a624e6d905ca7ce974480a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 5852}
+  - name: Map with Compass Animated_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 6196
+      width: 512
+      height: 336
+    spriteID: e7165844899384dfc8c787ece4d6173e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 6196}
+  - name: Map with Compass Animated_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 6540
+      width: 512
+      height: 336
+    spriteID: 31b3f9d9b6e384cc0b78e1259ad7224b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 6540}
+  - name: Map with Compass Animated_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 6884
+      width: 512
+      height: 336
+    spriteID: 3ae70dd160dc542d5aa5f66a8ca49458
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 6884}
+  - name: Map with Compass Animated_Frame_67
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 7228
+      width: 512
+      height: 336
+    spriteID: cef7d087144134b01a28595a7121a21e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 7228}
+  - name: Map with Compass Animated_Frame_68
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 7572
+      width: 512
+      height: 336
+    spriteID: 18272782c29854b67b8f098fd885f5c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1044, y: 7572}
+  - name: Map with Compass Animated_Frame_69
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 4
+      width: 512
+      height: 336
+    spriteID: 688ec6f192ce2490fa93c0cdc31c9adb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 4}
+  - name: Map with Compass Animated_Frame_70
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 348
+      width: 512
+      height: 336
+    spriteID: 0f5be0c2dfa3c430f8a29659f7a4b588
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 348}
+  - name: Map with Compass Animated_Frame_71
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 692
+      width: 512
+      height: 336
+    spriteID: a33657fafb21d4ac8ba542f1d369071c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 692}
+  - name: Map with Compass Animated_Frame_72
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 1036
+      width: 512
+      height: 336
+    spriteID: 9a35cbbd297384c27b6df3704c122bc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 1036}
+  - name: Map with Compass Animated_Frame_73
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 1380
+      width: 512
+      height: 336
+    spriteID: 7c3c40bee70d74f569f0182ae20f0f6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 1380}
+  - name: Map with Compass Animated_Frame_74
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 1724
+      width: 512
+      height: 336
+    spriteID: d7d8f03c226684bdb96cc84d6ac01f65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 1724}
+  - name: Map with Compass Animated_Frame_75
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 2068
+      width: 512
+      height: 336
+    spriteID: fa6504827c4544c1bb441068dfc15d42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 2068}
+  - name: Map with Compass Animated_Frame_76
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 2412
+      width: 512
+      height: 336
+    spriteID: 77a47dbd95ccd45b48d5d5c35a05d536
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 2412}
+  - name: Map with Compass Animated_Frame_77
+    originalName: 
+    pivot: {x: 0.5, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1564
+      y: 2756
+      width: 512
+      height: 336
+    spriteID: 47ce921ba054c42f2b40bc032f288408
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1564, y: 2756}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1847512713
+    name: Map with Compass Animated
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Map with Compass Animated_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: afd8dd8ea299b4ee4ba9e4466b083b83
+    - name: Map with Compass Animated_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: e5d5fd48275744b2b83c7ff1092b851c
+    - name: Map with Compass Animated_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 5515210f76c5c460eb11fbcdae056710
+    - name: Map with Compass Animated_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: cec1392ae4e574de9a16ddc898fbee28
+    - name: Map with Compass Animated_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: f438efa668d7840e9b751d7f337d866c
+    - name: Map with Compass Animated_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 9f0bbe812f4f84f589176f992a21da4a
+    - name: Map with Compass Animated_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 640cf03473f8049d9af6134b6e6207b0
+    - name: Map with Compass Animated_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 71eb4daba97fc4bf394ff4513e4abe5c
+    - name: Map with Compass Animated_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 86faa1d0a07ad4271b3059838beb9bd1
+    - name: Map with Compass Animated_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: cf1fa895a3d464f7b9d04916e60fb894
+    - name: Map with Compass Animated_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: b658217307c0f4ff8ae2a97eb9922f80
+    - name: Map with Compass Animated_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: ab37388a9c4e84dd4babe310d368899f
+    - name: Map with Compass Animated_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 767603c34d4224196a5a08e8bd908217
+    - name: Map with Compass Animated_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 74553d9c6fa614a2eb6dcd8044063e2b
+    - name: Map with Compass Animated_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: d93d7ca696f704a37b0aefa58a0a3580
+    - name: Map with Compass Animated_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c0c3d72e5abfa45aa8c3394bd15dcac1
+    - name: Map with Compass Animated_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c69b7cde569f44584a77f330a99c296f
+    - name: Map with Compass Animated_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 29e12e338df45448ca820955babea88e
+    - name: Map with Compass Animated_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 2864973520114414986db0f272ab593e
+    - name: Map with Compass Animated_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: dec01256cec8c47cc9e5d3c889001b0a
+    - name: Map with Compass Animated_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 48f1ca3ece4e74a58917792efbcf4e38
+    - name: Map with Compass Animated_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: bd5616e9d8b0c4a37a5be79549cf46b3
+    - name: Map with Compass Animated_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 22271f219e70a48b5838af0104f820c1
+    - name: Map with Compass Animated_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 526cb05ac73974251a6165fe985f94fe
+    - name: Map with Compass Animated_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: f68243d937fca4aaeb514a9eab48f92a
+    - name: Map with Compass Animated_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 69d3cc663e33c46a2946eac1b01b1cd8
+    - name: Map with Compass Animated_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 8000a0dd7e1244886bc17aec7c75903c
+    - name: Map with Compass Animated_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: ee9d73832e94b4cdf82160bd71669032
+    - name: Map with Compass Animated_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: ff74feb0c17e7424ca1084b49bacee0a
+    - name: Map with Compass Animated_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: a45fc7192b3964c34ad5c035f1199571
+    - name: Map with Compass Animated_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: d4c3fe76130d34891ab121e4ca2769ff
+    - name: Map with Compass Animated_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: db77df46e03964308be503ef2b7a3381
+    - name: Map with Compass Animated_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: bb60e8380977b41b28512af8f0924b90
+    - name: Map with Compass Animated_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 8bd6f2f660266462eb2382d331314cfd
+    - name: Map with Compass Animated_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: eca0625fc228d4c9ea07e5546f4f2130
+    - name: Map with Compass Animated_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 9b886fbeb5bba431bae3111b3a4e4269
+    - name: Map with Compass Animated_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: db7efa91256ce482e8ea6089036d7ff2
+    - name: Map with Compass Animated_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: a305d7a67f90e41309718dfa11a57422
+    - name: Map with Compass Animated_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c76e08b2d3eda4c0a9dc1422a6c4b72f
+    - name: Map with Compass Animated_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 2e84958e21063409badda9a63ac43f4e
+    - name: Map with Compass Animated_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: fde1dd2d0def6492388b83f86011afe7
+    - name: Map with Compass Animated_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c4ea1418e5a5b41f0983482209d426e0
+    - name: Map with Compass Animated_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 27bd98cf29dd44899ad3f2b0b3734d89
+    - name: Map with Compass Animated_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 4e771805c2b7c405db5b930786c7e7c9
+    - name: Map with Compass Animated_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c715b3233f84044b0abdb3749e5d16dd
+    - name: Map with Compass Animated_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: c3d5e7082c06645acb2cfd8219353049
+    - name: Map with Compass Animated_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: adcc8cb170ca4439485d6155f1f553c2
+    - name: Map with Compass Animated_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: a4827df0d44f64f068480978e1a4ee42
+    - name: Map with Compass Animated_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 775b07254dd0e4ad1b5b255a153b1d7f
+    - name: Map with Compass Animated_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 3ccd5f5abc8c84c7c8a53a1bbf88e056
+    - name: Map with Compass Animated_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 053f74a87bdaf4ee39c87fa4028b8205
+    - name: Map with Compass Animated_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: b6b6591fbbe5e448bb14e4cddc50e53e
+    - name: Map with Compass Animated_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 63309b29bb66c448d868a834a9143820
+    - name: Map with Compass Animated_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 62b91dfd91e9a4a88b9c2ced8444aeec
+    - name: Map with Compass Animated_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 046a193631b504c15a9470d82d9acb64
+    - name: Map with Compass Animated_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: eabc022a979fd43ddb9d4d7319734d13
+    - name: Map with Compass Animated_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 379804ad76dac4b0fa0e3a4207c20228
+    - name: Map with Compass Animated_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: d1dd0bb37cb114a2ba80864eb4ad0c0d
+    - name: Map with Compass Animated_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: cc7154419f19946f4b1785416ff2ce7b
+    - name: Map with Compass Animated_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 347f02fbe0baf4583947ac86e9038d47
+    - name: Map with Compass Animated_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: efab02d8fbedd433fa2996b23086aaae
+    - name: Map with Compass Animated_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 84611fc493dcf4abc9308ae8039f42d8
+    - name: Map with Compass Animated_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: bf3403111fb584f83bb377f0c5f45c2f
+    - name: Map with Compass Animated_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 7cfcf514c7a624e6d905ca7ce974480a
+    - name: Map with Compass Animated_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: e7165844899384dfc8c787ece4d6173e
+    - name: Map with Compass Animated_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 31b3f9d9b6e384cc0b78e1259ad7224b
+    - name: Map with Compass Animated_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 3ae70dd160dc542d5aa5f66a8ca49458
+    - name: Map with Compass Animated_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: cef7d087144134b01a28595a7121a21e
+    - name: Map with Compass Animated_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 18272782c29854b67b8f098fd885f5c8
+    - name: Map with Compass Animated_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 688ec6f192ce2490fa93c0cdc31c9adb
+    - name: Map with Compass Animated_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 0f5be0c2dfa3c430f8a29659f7a4b588
+    - name: Map with Compass Animated_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: a33657fafb21d4ac8ba542f1d369071c
+    - name: Map with Compass Animated_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 9a35cbbd297384c27b6df3704c122bc2
+    - name: Map with Compass Animated_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 7c3c40bee70d74f569f0182ae20f0f6e
+    - name: Map with Compass Animated_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: d7d8f03c226684bdb96cc84d6ac01f65
+    - name: Map with Compass Animated_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: fa6504827c4544c1bb441068dfc15d42
+    - name: Map with Compass Animated_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 77a47dbd95ccd45b48d5d5c35a05d536
+    - name: Map with Compass Animated_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 48
+        y: 80
+        width: 512
+        height: 336
+      spriteId: 47ce921ba054c42f2b40bc032f288408
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 608, y: 512}
