@@ -7,6 +7,10 @@ using UnityEngine;
 public enum SoundEffectEnum
 {
     Tick = 0,
+    Open_Diary = 1,
+    UI_Popup = 2,
+    UI_Popout = 3,
+    
 }
 
 public class SoundManager: Singleton<SoundManager>
