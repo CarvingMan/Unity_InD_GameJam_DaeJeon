@@ -139,10 +139,10 @@ TextureImporter:
       name: "\uD655\uB300\uD55C \uBA3C\uC9C0 \uC313\uC778 \uC0C1\uC790_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 960
-        height: 540
+        x: 222
+        y: 114
+        width: 510
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: "\uD655\uB300\uD55C \uBA3C\uC9C0 \uC313\uC778 \uC0C1\uC790_1"
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 960
-        height: 540
+        x: 1200
+        y: 114
+        width: 480
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

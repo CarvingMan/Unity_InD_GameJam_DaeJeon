@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Butterfly : InteractiveObject
+public class Butterfly : InteractiveObject, IPointerEnterHandler, IPointerExitHandler
 {
 
     [SerializeField]
@@ -21,7 +22,7 @@ public class Butterfly : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_TextBox°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_TextBoxï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 
@@ -31,17 +32,17 @@ public class Butterfly : InteractiveObject
         color.a = 1;
         m_ButterFlyImage.color = color;
         Destroy(gameObject);
+        
+        m_objTextBox.SetActive(false);
     }
 
-    public override void OnMouseHoverEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        base.OnMouseHoverEnter();
         m_objTextBox.SetActive(true);
     }
 
-    public override void OnMouseHoverExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        base.OnMouseHoverExit();
         m_objTextBox.SetActive(false);
     }
 }

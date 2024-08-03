@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stage2Closet : InteractiveObject
 {
 
-    //2Ãþ ¿ÊÀåÀº Àá°ÜÀÖÁö ¾Ê´Ù.
+    //2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½.
 
     [SerializeField]
     GameObject m_objTextBox = null;
@@ -16,7 +16,7 @@ public class Stage2Closet : InteractiveObject
 
 
 
-    //ÇÃ·¹ÀÌ¾î Á¦¾î¿ë
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     PlayerControl m_csPlayerControl = null;
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class Stage2Closet : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_objTextBox°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objTextBoxï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if(m_objClosetWindow != null)
@@ -37,7 +37,7 @@ public class Stage2Closet : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_objClosetWindow°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objClosetWindowï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if(m_csPlayerControl == null)
@@ -52,13 +52,11 @@ public class Stage2Closet : InteractiveObject
         if(m_camera != null)
         {
             m_csPlayerControl.SetPlayerStop(true);
-            Vector2 vecTarget = m_camera.transform.position;
-            m_objClosetWindow.transform.position = vecTarget;
             m_objClosetWindow.SetActive(true);
         }
         else
         {
-            Debug.LogError("m_camera°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_cameraï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 

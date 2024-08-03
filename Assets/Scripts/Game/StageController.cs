@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StageController: MonoBehaviour
 {
-    private const int MAX_DIARY_COUNT = 4;
+    public int stage = 1;
+    
+    public int maxDiaryCount = 4;
     private Dictionary<string, object> _stateDict = new();
     
     private HashSet<string> _foundDiaries = new();
@@ -23,6 +26,13 @@ public class StageController: MonoBehaviour
         OnDiaryFound += (int index) =>
         {
             Debug.Log($"Found Diaries: {index}");
+        };
+
+        OnStageClear += () =>
+        {
+            if (stage != 2) return;
+            
+            HandleStage2Clear();
         };
     }
 
@@ -76,7 +86,7 @@ public class StageController: MonoBehaviour
         OnDiaryFound?.Invoke(_foundDiaries.Count);
 
         var diaryCount = _foundDiaries.Count;
-        if (diaryCount >= MAX_DIARY_COUNT)
+        if (diaryCount >= maxDiaryCount)
         {
             _stageClear = true;
             OnStageClear?.Invoke();
@@ -108,6 +118,12 @@ public class StageController: MonoBehaviour
         yield return new WaitWhile(tween.IsPlaying);
         
         playerController.SetPlayerStop(false);
+    }
+
+    private void HandleStage2Clear()
+    {
+        // TODO: 고양이 울기
+        // TODO: 고양이 창이 생기기?
     }
 
 }

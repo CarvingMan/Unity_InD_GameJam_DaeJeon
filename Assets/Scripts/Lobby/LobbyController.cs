@@ -110,12 +110,6 @@ public class LobbyController : MonoBehaviour
         tween = butterfly.DOFade(0, 2.5f);
         yield return new WaitWhile(tween.IsPlaying);
 
-        if (SceneManager.sceneCount < 2)
-        {
-            Debug.LogError("Not enough scenes");
-            yield break;
-        }
-
         LoadMain();
     }
 

@@ -61,6 +61,8 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
                     stageController = FindObjectOfType<StageController>();
                 }
 
+                if (stageController == null) return;
+
                 if (isCupboard)
                 {
                     stageController.UpdateDiaryFound("cupboard");
