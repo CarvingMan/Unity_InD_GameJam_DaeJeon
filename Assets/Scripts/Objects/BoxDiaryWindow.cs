@@ -27,6 +27,8 @@ public class BoxDiaryWindow : InteractiveObject
         {
             m_csPlayerControl = FindObjectOfType<PlayerControl>();
         }
+
+        
     }
 
     private void OnEnable()
