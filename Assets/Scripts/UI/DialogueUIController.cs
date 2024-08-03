@@ -15,7 +15,7 @@ public class Dialogue
 public class DialogueUIController : MonoBehaviour
 {
     [SerializeField] private GameObject content;
-    [SerializeField] private TextAnimator_TMP textAnimator;
+    [SerializeField] private TypewriterByCharacter textAnimator;
     [SerializeField] private TextMeshProUGUI nameText;
 
     private Dialogue[] _textsToShow;
@@ -25,9 +25,9 @@ public class DialogueUIController : MonoBehaviour
     {
         _textsToShow = texts;
         
-        SetCurrentText();
-        content.SetActive(true);
         _dialogueIndex = 0;
+        content.SetActive(true);
+        SetCurrentText();
     }
 
     public void CloseDialogue()
@@ -37,7 +37,7 @@ public class DialogueUIController : MonoBehaviour
 
     public void OnDialogueClick()
     {
-        if (textAnimator.allLettersShown)
+        if (textAnimator.isShowingText == false)
         {
             _dialogueIndex++;
 
@@ -57,9 +57,9 @@ public class DialogueUIController : MonoBehaviour
 
     private void SkipText()
     {
-        if (textAnimator.allLettersShown) return;
+        if (textAnimator.isShowingText == false) return;
         
-        textAnimator.SetVisibilityEntireText(true);
+        textAnimator.SkipTypewriter();
     }
 
     private void SetCurrentText()
@@ -71,10 +71,10 @@ public class DialogueUIController : MonoBehaviour
         }
         else
         {
-            nameText.text = dialogue.name;
+            nameText.text = $"[{dialogue.name}]";
             nameText.gameObject.SetActive(true);
         }
 
-        textAnimator.SetText(dialogue.dialogue);
+        textAnimator.ShowText(dialogue.dialogue);
     }
 }
