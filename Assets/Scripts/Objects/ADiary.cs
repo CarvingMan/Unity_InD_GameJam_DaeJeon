@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ADiary : InteractiveObject
+public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandler
 {
-    //¶³¾îÁö°Å³ª »óÀÚ¼Ó ÀÏ±âÀå ÇÁ¸®ÆÕÀ¸·Î µ¿ÀÏÇÏ°Ô ±¸Çö
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ï¿½Ú¼ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     [SerializeField]
-    GameObject m_objTextBox = null; //¼³¸íÃ¢
+    GameObject m_objTextBox = null; //ï¿½ï¿½ï¿½ï¿½Ã¢
     [SerializeField]
     GameObject m_objDiaryWindow = null;
     [SerializeField]
-    Camera m_camera; // Ä«¸Þ¶óÀÇ Áß½ÉÀ¸·Î Window¸¦ Ç¥ÃâÇÏ±â À§ÇÔ
+    Camera m_camera; // Ä«ï¿½Þ¶ï¿½ï¿½ï¿½ ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½ Windowï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    bool m_isRedy = false; //ÁØºñ°¡ µÇ¾úÀ» ¶§¿¡¸¸ Å¬¸¯ÀÌ °¡´ÉÇÏ´Ù.
+    bool m_isRedy = false; //ï¿½Øºï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
 
-    //ÇÃ·¹ÀÌ¾î Á¦¾î¿ë
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     PlayerControl m_csPlayerControl;
+
+    public bool isCupboard;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +28,6 @@ public class ADiary : InteractiveObject
         {
             m_objTextBox.SetActive(false);
         }
-        else
-        {
-            Debug.LogError("m_objTextBox°¡ ¾ø½À´Ï´Ù.");
-        }
 
         if(m_objDiaryWindow != null)
         {
@@ -36,7 +35,7 @@ public class ADiary : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_objDiaryWindow°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objDiaryWindowï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if(m_csPlayerControl == null)
@@ -46,44 +45,59 @@ public class ADiary : InteractiveObject
 
     }
 
-    //Å¬¸¯½Ã Diary Canvas Active
+    //Å¬ï¿½ï¿½ï¿½ï¿½ Diary Canvas Active
     protected override void DoInteract()
     {
-        if (m_objDiaryWindow.activeSelf == false && m_isRedy)
+        if (!isCupboard || (m_objDiaryWindow.activeSelf == false && m_isRedy))
         {
             
             if (m_camera != null)
             {
-                Vector2 vecPos = m_camera.transform.position;
-                m_objDiaryWindow.transform.position = vecPos; //Ä«¸Þ¶ó Áß½É ÁÂÇ¥·Î Window ÀÌµ¿
                 m_objDiaryWindow.SetActive(true);
                 m_csPlayerControl.SetPlayerStop(true);
+
+                if (stageController == null)
+                {
+                    stageController = FindObjectOfType<StageController>();
+                }
+
+                if (stageController == null) return;
+
+                if (isCupboard)
+                {
+                    stageController.UpdateDiaryFound("cupboard");
+                }
+                else
+                {
+                    stageController.UpdateDiaryFound("closet");
+                }
             }
             else
             {
-                Debug.LogError("m_camera°¡ ¾ø½À´Ï´Ù.");
+                Debug.LogError("m_cameraï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
         }
-    }
-
-    public override void OnMouseHoverEnter()
-    {
-        base.OnMouseHoverEnter();
-        if(m_objDiaryWindow.activeSelf == false)
-        {
-            m_objTextBox.SetActive(true);
-        }
-
-    }
-
-    public override void OnMouseHoverExit()
-    {
-        base.OnMouseHoverExit();
-        m_objTextBox.SetActive(false);
     }
 
     public void SetDiaryRedy(bool isRedy)
     {
         m_isRedy = isRedy;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (m_objTextBox == null) return;
+        
+        if(m_objDiaryWindow.activeSelf == false)
+        {
+            m_objTextBox.SetActive(true);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (m_objTextBox == null) return;
+        
+        m_objTextBox.SetActive(false);
     }
 }

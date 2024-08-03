@@ -1,58 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ADiaryWindow : InteractiveObject
+public class ADiaryWindow : InteractiveObject, IPointerEnterHandler, IPointerExitHandler
 {
-    //´ÙÀÌ¾î¸® ÇÁ¸®ÆÕÀ» ´­·¶À» ¶§ È­¸é °¡¿îµ¥ ¶ç¾îÁö´Â ÀÏ±âÀå °ü·Ã ±â¹Í
-
-
     [SerializeField]
-    GameObject m_objDiaryPanel = null; //ÀÏ±âÀå¿¡ ¸¶¿ì½º¸¦ °¡Á®´Ù ³õÀ»½Ã panel¿¡ ³»¿ë Ãâ·Â
+    GameObject m_objDiaryPanel = null;
 
-    //ÇÃ·¹ÀÌ¾î Á¦¾î¿ë
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     PlayerControl m_csPlayerControl = null;
-
- 
-
-    // Start is called before the first frame update
+    
     void Start()
     {
-       
-
         if (m_objDiaryPanel != null)
         {
             m_objDiaryPanel.SetActive(false);
         }
         else
         {
-            Debug.LogError("m_objDiaryPanelÀÌ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objDiaryPanelï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if(m_csPlayerControl == null)
         {
             m_csPlayerControl = FindObjectOfType<PlayerControl>();
         }
-
-       
-        
     }
-    //Å¬¸¯½Ã Diary Canvas Active
+    //Å¬ï¿½ï¿½ï¿½ï¿½ Diary Canvas Active
     protected override void DoInteract()
     {
-        m_csPlayerControl.SetPlayerStop(false);//´Ù½Ã ¿òÁ÷ÀÌµµ·Ï ¼³Á¤
+        m_csPlayerControl.SetPlayerStop(false);//ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         gameObject.SetActive(false);
     }
 
-    public override void OnMouseHoverEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        base.OnMouseHoverEnter();
         m_objDiaryPanel.SetActive(true);
     }
 
-    public override void OnMouseHoverExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        base.OnMouseHoverExit();
         m_objDiaryPanel.SetActive(false);
     }
 }

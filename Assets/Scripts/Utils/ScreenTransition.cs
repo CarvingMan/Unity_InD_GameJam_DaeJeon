@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class ScreenTransition: MonoBehaviour
 {
-    [SerializeField] private float duration;
-
     private Image _image;
 
     private void Awake()
@@ -20,13 +18,19 @@ public class ScreenTransition: MonoBehaviour
 
     public Tween FadeOut(float duration)
     {
-        var tween = _image.DOFade(0f, duration);
+        var color = _image.color;
+        color.a = 0;
+        _image.color = color;
+        var tween = _image.DOFade(1f, duration);
         return tween;
     }
 
     public Tween FadeIn(float duration)
     {
-        var tween = _image.DOFade(1f, duration);
+        var color = _image.color;
+        color.a = 1;
+        _image.color = color;
+        var tween = _image.DOFade(0, duration);
         return tween;
     }
 }

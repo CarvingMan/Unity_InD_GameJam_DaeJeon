@@ -2,32 +2,32 @@ using UnityEngine;
 
 namespace Game
 {
-    public class Lock : InteractiveObject
+    public class Lock : ZoomedInteractiveObject
     {
         [SerializeField]
-        private GameObject m_objLock = null; // Àá±Ý ¿ÀºêÁ§Æ®
-        private bool isLocked = true; // Àá±Ý »óÅÂ Ãß°¡
+        private GameObject m_objLock = null; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+        private bool isLocked = true; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
         [SerializeField]
         private Camera m_camera = null;
 
-        // ÇÃ·¹ÀÌ¾î Á¦¾î¿ë ½ºÅ©¸³Æ® º¯¼ö
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
         private PlayerControl m_csPlayerControl = null;
 
-        // Closet ÂüÁ¶ Ãß°¡
+        // Closet ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
         [SerializeField]
-        private Closet m_closet = null; // Closet Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ ÂüÁ¶
+        private Closet m_closet = null; // Closet Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         private void Start()
         {
-            // m_objLockÀ» ºñÈ°¼ºÈ­
+            // m_objLockï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
             if (m_objLock != null)
             {
-                m_objLock.SetActive(false); // ÃÊ±â »óÅÂ¸¦ Àá±ÝÀ¸·Î ¼³Á¤
+                m_objLock.SetActive(false); // ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
             else
             {
-                Debug.LogError("m_objLock°¡ ¾ø½À´Ï´Ù.");
+                Debug.LogError("m_objLockï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
             }
 
             if (m_csPlayerControl == null)
@@ -36,18 +36,18 @@ namespace Game
             }
         }
 
-        // Àá±ÝÀ» ÇØÁ¦ÇÏ´Â ¸Þ¼Òµå
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
         public void Unlock()
         {
             if (m_objLock != null && isLocked)
             {
-                m_objLock.SetActive(false); // ¿äÃ»¿¡ µû¶ó ºñÈ°¼ºÈ­
-                isLocked = false; // Àá±Ý »óÅÂ ¾÷µ¥ÀÌÆ®
+                m_objLock.SetActive(false); // ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
+                isLocked = false; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
-                // ClosetÀÇ m_objTextCloset ºñÈ°¼ºÈ­
+                // Closetï¿½ï¿½ m_objTextCloset ï¿½ï¿½È°ï¿½ï¿½È­
                 if (m_closet != null)
                 {
-                    m_closet.SetTextClosetInactive(); // ¸Þ¼Òµå È£Ãâ
+                    m_closet.SetTextClosetInactive(); // ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
                 }
             }
         }
@@ -58,19 +58,19 @@ namespace Game
             {
                 if (m_camera != null)
                 {
-                    m_objLock.transform.position = new Vector2(m_camera.transform.position.x, m_camera.transform.position.y);
+                    // m_objLock.transform.position = new Vector2(m_camera.transform.position.x, m_camera.transform.position.y);
                     m_objLock.SetActive(true);
                     m_csPlayerControl.SetPlayerStop(true);
                 }
             }
 
-            if (!isLocked) // Àá±Ý ÇØÁ¦µÈ °æ¿ì¿¡¸¸ È°¼ºÈ­
+            if (!isLocked) // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ È°ï¿½ï¿½È­
             {
-                m_objLock.SetActive(false); // ¿©±â¼­ È°¼ºÈ­ ¿äÃ»
+                m_objLock.SetActive(false); // ï¿½ï¿½ï¿½â¼­ È°ï¿½ï¿½È­ ï¿½ï¿½Ã»
             }
             else
             {
-                m_objLock.SetActive(true); // ¿©±â¼­ È°¼ºÈ­ ¿äÃ»
+                m_objLock.SetActive(true); // ï¿½ï¿½ï¿½â¼­ È°ï¿½ï¿½È­ ï¿½ï¿½Ã»
             }
         }
 
@@ -78,7 +78,7 @@ namespace Game
         {
             if (m_objLock != null)
             {
-                m_objLock.SetActive(false); // Lock ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
+                m_objLock.SetActive(false); // Lock ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
             }
         }
     }

@@ -8,21 +8,23 @@ using Game;
 public class password : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] objects; // ¿ÀºêÁ§Æ® ¹è¿­
-    private int[] passwordArray; // ÆÐ½º¿öµå ¹è¿­
-    private int[] correctPassword = { 1, 0, 1, 0, 1, 0, 1, 0 }; // Á¤´ä ¹è¿­ ÃÊ±âÈ­
+    private Image[] objects; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½è¿­
+    private int[] passwordArray; // ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+    private int[] correctPassword = { 1, 0, 1, 0, 1, 0, 1, 0 }; // ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½Ê±ï¿½È­
     [SerializeField]
-    private Lock lockObject; // Lock ½ºÅ©¸³Æ®¸¦ °¡Áø ¿ÀºêÁ§Æ®
+    private Lock lockObject; // Lock ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     
     [SerializeField]
-    private GameObject lockCloset; // LockCloset ¿ÀºêÁ§Æ® ÂüÁ¶
+    private GameObject lockCloset; // LockCloset ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
 
     [SerializeField]
     GameObject lockClosetobject;
 
+    [SerializeField] private Sprite openedClosetSprite;
+
     private void Start()
     {
-        // ÆÐ½º¿öµå ¹è¿­ ÃÊ±âÈ­
+        // ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½Ê±ï¿½È­
         passwordArray = new int[objects.Length];
 
         if (lockClosetobject != null)
@@ -31,66 +33,54 @@ public class password : MonoBehaviour
         }
         else
         {
-            Debug.LogError("lockClosetobject°¡ ¾ø½À´Ï´Ù.");
-        }
-
-        // ¹è¿­¿¡ ÀÖ´Â °¢ ¿ÀºêÁ§Æ®¿¡ Å¬¸¯ ÀÌº¥Æ®¸¦ µî·ÏÇÕ´Ï´Ù.
-        foreach (GameObject obj in objects)
-        {
-            if (obj != null)
-            {
-                ObjectClickHandler clickHandler = obj.AddComponent<ObjectClickHandler>();
-                clickHandler.Initialize(ToggleColor);
-            }
+            Debug.LogError("lockClosetobjectï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 
-    // Å¬¸¯ ½Ã È£ÃâµÉ ¸Þ¼Òµå - »ö»ó Åä±Û
-    private void ToggleColor(GameObject clickedObject)
+    // Å¬ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    public void ToggleColor(int index)
     {
-        SpriteRenderer spriteRenderer = clickedObject.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
-        {
-            // ÇöÀç ¾ËÆÄ °ªÀ» È®ÀÎÇÏ¿© Åä±ÛÇÕ´Ï´Ù.
-            if (spriteRenderer.color.a == 0.25f)
-            {
-                spriteRenderer.color = new Color(0, 0, 0, 0.0f); // ¾ËÆÄ °ªÀ» 0.0À¸·Î º¯°æ
-                UpdatePasswordArray(clickedObject, 0); // ÆÐ½º¿öµå ¹è¿­¿¡ 0 ÀúÀå
-            }
-            else
-            {
-                spriteRenderer.color = new Color(0, 0, 0, 0.25f); // ¾ËÆÄ °ªÀ» 0.25·Î º¯°æ
-                UpdatePasswordArray(clickedObject, 1); // ÆÐ½º¿öµå ¹è¿­¿¡ 1 ÀúÀå
-            }
-        }
-    }
+        var image = objects[index];
+        var color = image.color;
 
-    // ÆÐ½º¿öµå ¹è¿­ ¾÷µ¥ÀÌÆ® ¸Þ¼Òµå
-    private void UpdatePasswordArray(GameObject obj, int value)
+        if (color.a == 0.25f)
+        {
+            color.a = 0;
+            UpdatePasswordArray(index, 0);
+        }
+        else
+        {
+            color.a = 0.25f;
+            UpdatePasswordArray(index, 1);
+        }
+        
+        image.color = color;
+    }
+    
+    private void UpdatePasswordArray(int index, int value)
     {
-        int index = System.Array.IndexOf(objects, obj);
         if (index >= 0 && index < passwordArray.Length)
         {
-            passwordArray[index] = value; // ÀÎµ¦½º¿¡ °ªÀ» ÀúÀå
+            passwordArray[index] = value; // ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
 
-        // Á¤´ä ¹è¿­°ú ºñ±³
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½
         CompareWithCorrectPassword();
     }
 
-    // Á¤´ä ¹è¿­°ú ºñ±³ÇÏ´Â ¸Þ¼Òµå
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
     private void CompareWithCorrectPassword()
     {
         bool isCorrect = true;
 
-        // ±æÀÌ°¡ °°ÀºÁö È®ÀÎ
+        // ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         if (passwordArray.Length != correctPassword.Length)
         {
             isCorrect = false;
         }
         else
         {
-            // °¢ ¿ä¼Ò¸¦ ºñ±³
+            // ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½
             for (int i = 0; i < passwordArray.Length; i++)
             {
                 if (passwordArray[i] != correctPassword[i])
@@ -101,51 +91,51 @@ public class password : MonoBehaviour
             }
         }
 
-        // °á°ú Ãâ·Â (µð¹ö±× ¸Þ½ÃÁö·Î È®ÀÎ)
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½)
         if (isCorrect)
         {
-            Debug.Log("ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÕ´Ï´Ù!");
-            lockObject.Unlock(); // ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏ¸é Unlock ¸Þ¼Òµå È£Ãâ
+            Debug.Log("ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½Ä¡ï¿½Õ´Ï´ï¿½!");
+            lockObject.Unlock(); // ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½Ä¡ï¿½Ï¸ï¿½ Unlock ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½
 
-            // LockClosetÀÇ ÀÌ¹ÌÁö º¯°æ
+            // LockClosetï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             ChangeLockClosetImage();
             lockClosetobject.SetActive(true);
         }
         else
         {
-            Debug.Log("ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+            Debug.Log("ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 
     private void ChangeLockClosetImage()
     {
-        // LockCloset ¿ÀºêÁ§Æ®ÀÇ Image ÄÄÆ÷³ÍÆ®¸¦ ¾òÀ½
+        // LockCloset ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Image ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Image imageComponent = lockCloset.GetComponent<Image>();
         if (imageComponent != null)
         {
-            // "¿Ê_0" ÀÌ¹ÌÁö·Î º¯°æ
-            imageComponent.sprite = Resources.Load<Sprite>("¿Ê"); // Resources Æú´õ¿¡ ÀÌ¹ÌÁö°¡ ÀÖ¾î¾ß ÇÔ
+            // "ï¿½ï¿½_0" ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            imageComponent.sprite = openedClosetSprite; // Resources ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ ï¿½ï¿½
         }
         else
         {
-            Debug.LogError("LockCloset¿¡ Image ÄÄÆ÷³ÍÆ®°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("LockClosetï¿½ï¿½ Image ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
     }
 }
 
-// Å¬¸¯ Ã³¸®¸¦ À§ÇÑ º°µµÀÇ Å¬·¡½º
+// Å¬ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
 public class ObjectClickHandler : MonoBehaviour
 {
-    private System.Action<GameObject> onClick; // Å¬¸¯ ÀÌº¥Æ® Ã³¸®±â
+    private System.Action<GameObject> onClick; // Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ï¿½ï¿½
 
-    // ÃÊ±âÈ­ ¸Þ¼Òµå
+    // ï¿½Ê±ï¿½È­ ï¿½Þ¼Òµï¿½
     public void Initialize(System.Action<GameObject> onClickAction)
     {
         onClick = onClickAction;
     }
 
-    private void OnMouseDown() // Å¬¸¯ ½Ã È£ÃâµÇ´Â ¸Þ¼Òµå
+    private void OnMouseDown() // Å¬ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Þ¼Òµï¿½
     {
-        onClick?.Invoke(gameObject); // Å¬¸¯µÈ ¿ÀºêÁ§Æ®¸¦ Àü´Þ
+        onClick?.Invoke(gameObject); // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 }

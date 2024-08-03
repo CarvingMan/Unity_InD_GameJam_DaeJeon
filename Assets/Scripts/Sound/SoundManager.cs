@@ -10,6 +10,7 @@ public enum SoundEffectEnum
     Open_Diary = 1,
     UI_Popup = 2,
     UI_Popout = 3,
+    Cat_Cry = 4,
     
 }
 

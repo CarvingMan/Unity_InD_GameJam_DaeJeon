@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Ã¥»ó ¹Ø ÀÏ±âÀå ¹Ú½º ½ºÅ©¸³Æ®
+//Ã¥ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®
 public class DiaryBox : InteractiveObject
 {
-    //¸¶¿ì½º enter½Ã º¸ÀÏ props ¼³¸í
+    //ï¿½ï¿½ï¿½ì½º enterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ props ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     GameObject m_objTextBox = null;
 
 
     [SerializeField]
-    GameObject m_objDiaryWindow = null; // »óÀÚ È­¸é È®´ë ¡æ »óÀÚ¿­¸² ¡æ ÀÏ±âÀå ¿­¸² ¡æ ´Ù½Ã ÀüÃ¼ 3ÀÎÄª ¹è°æ) Ã¢
+    GameObject m_objDiaryWindow = null; // ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½Ã¼ 3ï¿½ï¿½Äª ï¿½ï¿½ï¿½) Ã¢
     [SerializeField]
     Camera m_camera = null;
 
-    //ÇÃ·¹ÀÌ¾î Á¦¾î¿ë ½ºÅ©¸³Æ® º¯¼ö
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
     PlayerControl m_csPlayerControl = null;
 
     private void Start()
@@ -26,7 +26,7 @@ public class DiaryBox : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_objTextBox°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objTextBoxï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if (m_objDiaryWindow != null)
@@ -35,7 +35,7 @@ public class DiaryBox : InteractiveObject
         }
         else
         {
-            Debug.Log("DiaryPenelÀÌ ¾ø½À´Ï´Ù.");
+            Debug.Log("DiaryPenelï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if (m_csPlayerControl == null)
@@ -44,14 +44,13 @@ public class DiaryBox : InteractiveObject
         }
     }
 
-    //Å¬¸¯½Ã Diary Canvas Active
+    //Å¬ï¿½ï¿½ï¿½ï¿½ Diary Canvas Active
     protected override void DoInteract()
     {
         if (m_objDiaryWindow.activeSelf == false)
         {
             if (m_camera != null)
             {
-                m_objDiaryWindow.transform.position = new Vector2(m_camera.transform.position.x, m_camera.transform.position.y);
                 m_objDiaryWindow.SetActive(true);
                 m_csPlayerControl.SetPlayerStop(true);
 

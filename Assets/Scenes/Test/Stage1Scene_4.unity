@@ -7745,7 +7745,6 @@ GameObject:
   - component: {fileID: 1596370868}
   - component: {fileID: 1596370867}
   - component: {fileID: 1596370870}
-  - component: {fileID: 1596370866}
   m_Layer: 6
   m_Name: LockCloset
   m_TagString: Untagged
@@ -7772,58 +7771,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4.247304, y: -13.788004}
   m_SizeDelta: {x: 153.223, y: 94.931}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &1596370866
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596370864}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -700012031, guid: 93538d4fb37f6409fb0cef6a678ff47a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.4, y: 5.4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!61 &1596370867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7920,7 +7867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_objLock: {fileID: 2100007759}
-  m_camera: {fileID: 0}
+  m_camera: {fileID: 1419650256}
+  m_closet: {fileID: 1883742755}
 --- !u!1 &1609479957
 GameObject:
   m_ObjectHideFlags: 0
