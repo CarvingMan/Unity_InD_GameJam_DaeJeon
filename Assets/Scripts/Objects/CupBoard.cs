@@ -14,6 +14,12 @@ public class CupBoard : InteractiveObject
     [SerializeField]
     Sprite m_spOpenDoor = null;
 
+    [SerializeField]
+    GameObject m_objDiary = null;
+    [SerializeField]
+    Transform m_trFallPos = null; //바닥에 떨어지는 position
+
+
     //문 열림 변수들
     bool m_isOpen = false;
     const int m_nOpenCount = 5; // 다섯번 이상 두드릴 시 문이 열린다.
@@ -35,7 +41,18 @@ public class CupBoard : InteractiveObject
         {
             Debug.LogError("m_objTextBox가 없습니다.");
         }
+
+        if(m_objDiary != null)
+        {
+            m_objDiary.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("m_Diary가 없습니다.");
+        }
+
     }
+
 
     protected override void DoInteract()
     {
@@ -60,6 +77,10 @@ public class CupBoard : InteractiveObject
         base.OnMouseHoverExit();
         m_objTextBox.SetActive(false);
     }
+
+
+  
+
 
     //코루틴들
 
@@ -102,7 +123,7 @@ public class CupBoard : InteractiveObject
         {
             m_isCounting = true;
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2.8f);
             //2초 후에 두드린 횟수가 nOpenCount 이상일때
             if(m_nCurrentCount > m_nOpenCount)
             {
@@ -117,6 +138,7 @@ public class CupBoard : InteractiveObject
                     Debug.LogError("m_spOpenDoor가 없습니다.");
 
                 }
+                StartCoroutine(CorFallDiary());
                 m_isCounting = false;
                 yield break;
             }
@@ -128,5 +150,28 @@ public class CupBoard : InteractiveObject
                 yield break;
             }
         }
+    }
+
+    //일기장이 떨어지는 함수
+    IEnumerator CorFallDiary()
+    {
+        m_objDiary.GetComponent<ADiary>().SetDiaryRedy(false);
+        m_objDiary.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        while (true)
+        {
+            m_objDiary.transform.position = Vector2.Lerp(m_objDiary.transform.position, m_trFallPos.position, 0.1f);
+            yield return new WaitForSeconds(0.05f);
+            float fDistance = Vector2.Distance(m_objDiary.transform.position, m_trFallPos.position);
+            if (fDistance < 0.1f)
+            {
+                m_objDiary.GetComponent<ADiary>().SetDiaryRedy(true);
+                yield break;
+            }
+            
+
+        }
+
+
     }
 }
