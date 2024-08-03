@@ -15,19 +15,25 @@ public class Dialogue
 public class DialogueUIController : MonoBehaviour
 {
     [SerializeField] private GameObject content;
-    [SerializeField] private TextAnimator_TMP textAnimator;
+    [SerializeField] private TypewriterByCharacter textAnimator;
     [SerializeField] private TextMeshProUGUI nameText;
 
     private Dialogue[] _textsToShow;
     private int _dialogueIndex = 0;
+
+    private bool _isTimeline = false;
+    private Action _closeAction;
     
-    public void ShowDialogue(Dialogue[] texts)
+    public void ShowDialogue(Dialogue[] texts, bool isTimeline=false, Action closeAction=null)
     {
         _textsToShow = texts;
         
-        SetCurrentText();
-        content.SetActive(true);
         _dialogueIndex = 0;
+        content.SetActive(true);
+        SetCurrentText();
+
+        _isTimeline = isTimeline;
+        _closeAction = closeAction;
     }
 
     public void CloseDialogue()
@@ -37,13 +43,14 @@ public class DialogueUIController : MonoBehaviour
 
     public void OnDialogueClick()
     {
-        if (textAnimator.allLettersShown)
+        if (textAnimator.isShowingText == false)
         {
             _dialogueIndex++;
 
             if (_dialogueIndex >= _textsToShow.Length)
             {
-                CloseDialogue();
+                if (_isTimeline == false) CloseDialogue();
+                else _closeAction?.Invoke();
                 return;
             }
 
@@ -57,9 +64,9 @@ public class DialogueUIController : MonoBehaviour
 
     private void SkipText()
     {
-        if (textAnimator.allLettersShown) return;
+        if (textAnimator.isShowingText == false) return;
         
-        textAnimator.SetVisibilityEntireText(true);
+        textAnimator.SkipTypewriter();
     }
 
     private void SetCurrentText()
@@ -71,10 +78,10 @@ public class DialogueUIController : MonoBehaviour
         }
         else
         {
-            nameText.text = dialogue.name;
+            nameText.text = $"[{dialogue.name}]";
             nameText.gameObject.SetActive(true);
         }
 
-        textAnimator.SetText(dialogue.dialogue);
+        textAnimator.ShowText(dialogue.dialogue);
     }
 }
