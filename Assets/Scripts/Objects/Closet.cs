@@ -5,16 +5,17 @@ namespace Game
     public class Closet : InteractiveObject
     {
         [SerializeField]
-        GameObject m_objTextCloset = null;
+        private GameObject m_objTextCloset = null;
+        private bool UnLocked = false; // 해금상태 추가
 
         [SerializeField]
-        GameObject m_objCloset = null;
+        private GameObject m_objCloset = null;
 
         [SerializeField]
-        Camera m_camera = null;
+        private Camera m_camera = null;
 
         // 플레이어 제어용 스크립트 변수
-        PlayerControl m_csPlayerControl = null;
+        private PlayerControl m_csPlayerControl = null;
 
         private void Start()
         {
@@ -55,23 +56,6 @@ namespace Game
             }
         }
 
-        private void Update()
-        {
-            // 마우스 클릭 감지
-            if (Input.GetMouseButtonDown(0) && m_objCloset.activeSelf)
-            {
-                // 클릭한 위치를 Raycast로 확인
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-
-                // 클릭한 위치가 클로짓이 아닌 경우
-                if (hit.collider == null || hit.collider.gameObject != m_objCloset)
-                {
-                    CloseCloset(); // 클로짓 닫기
-                }
-            }
-        }
-
         private void CloseCloset()
         {
             m_objCloset.SetActive(false);
@@ -80,7 +64,8 @@ namespace Game
 
         public override void OnMouseHoverEnter()
         {
-            if (!m_objCloset.activeSelf)
+            base.OnMouseHoverEnter();
+            if (m_objCloset.activeSelf == false)
             {
                 m_objTextCloset.SetActive(true);
             }
@@ -90,6 +75,15 @@ namespace Game
         {
             base.OnMouseHoverExit();
             m_objTextCloset.SetActive(false);
+        }
+
+        // m_objTextCloset 비활성화 메소드 추가
+        public void SetTextClosetInactive()
+        {
+            if (m_objTextCloset != null)
+            {
+                m_objTextCloset.SetActive(false);
+            }
         }
     }
 }

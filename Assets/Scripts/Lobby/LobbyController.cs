@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Febucci.UI;
 using UnityEngine;
 using DG.Tweening;
-using UnityEditor;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
