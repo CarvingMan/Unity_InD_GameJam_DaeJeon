@@ -52,7 +52,7 @@ public class DiaryBox : InteractiveObject
             if (m_camera != null)
             {
                 m_objDiaryWindow.SetActive(true);
-                m_csPlayerControl.SetPlayerStop(true);
+                m_csPlayerControl.SetPlayerStop(false); // 원래 true나 왜인지 자꾸 다이얼 꺼도 안움직여 false로 하니 작동
 
             }
         }

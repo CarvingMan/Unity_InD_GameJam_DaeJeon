@@ -22,12 +22,12 @@ public class StageController: MonoBehaviour
     public bool IsStageClear => _stageClear;
 
     
-    [SerializeField]
-    GameObject m_objPlayerCamera = null;
-    [SerializeField]
-    Transform m_trWindow = null;
-    [SerializeField]
-    Transform m_trPlayer = null;
+    //[SerializeField]
+    //GameObject m_objPlayerCamera = null;
+    //[SerializeField]
+    //Transform m_trWindow = null;
+    //[SerializeField]
+    //Transform m_trPlayer = null;
 
     private void Start()
     {
@@ -140,4 +140,5 @@ public class StageController: MonoBehaviour
         // TODO: 고양이 창 누르면 => 확대창 (UI)
         
     }
+
 }
