@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerMouseController : MonoBehaviour
 {
@@ -31,14 +32,19 @@ public class PlayerMouseController : MonoBehaviour
         if (_timer < refreshRate) return;
         
         var mousePosition = Input.mousePosition;
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+		
+        pointerData.position = Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        if (IsPointerOverUIElement(results))
+        {
+            return;
+        }
+        
         var ray = camera.ScreenPointToRay(mousePosition);
-        // bool isOverUI = EventSystem.current.IsPointerOverGameObject();
-        //
-        // if (isOverUI)
-        // {
-        //     Debug.Log(EventSystem.current.gameObject.name);
-        //     return;
-        // }
 
         int nLayerMask = 1 << LayerMask.NameToLayer("Props");
         
@@ -50,17 +56,46 @@ public class PlayerMouseController : MonoBehaviour
 
     private void HandleClick()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonDown(0))
         {
             var mousePosition = Input.mousePosition;
             
-            // bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
-            // if (isOverUI) return;
+            PointerEventData pointerData = new PointerEventData (EventSystem.current)
+            {
+                pointerId = -1,
+            };
+		
+            pointerData.position = Input.mousePosition;
+
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerData, results);
+            if (IsPointerOverUIElement(results))
+            {
+                return;
+            }
+            
             var ray = camera.ScreenPointToRay(mousePosition);
             int nLayerMask = 1 << LayerMask.NameToLayer("Props");
             var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f, nLayerMask);
             OnMouseClick?.Invoke(raycastHit2D);
         }
+    }
+    
+    public static bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults )
+    {
+        for(int index = 0;  index < eventSystemRaysastResults.Count; index ++)
+        {
+            RaycastResult curRaysastResult = eventSystemRaysastResults [index];
+
+            if (curRaysastResult.gameObject.layer == LayerMask.NameToLayer("UI"))
+            {
+                return true;
+            }
+
+            
+        }
+
+        return false;
     }
 
     
