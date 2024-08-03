@@ -8,6 +8,7 @@ using UnityEngine.Timeline;
 [Serializable]
 public class TimelineDialogueBehaviour : PlayableBehaviour
 {
+    public int dialogueIndex;
     public bool closeDialogue;
     
     private PlayableDirector _director;
@@ -17,14 +18,6 @@ public class TimelineDialogueBehaviour : PlayableBehaviour
 
     private bool _isPlaying = false;
 
-    private string _champID;
-    private int _dialogueID;
-
-    public override void OnPlayableCreate(Playable playable)
-    {
-
-    }
-
     public override void OnBehaviourPlay(Playable playable, FrameData info)
     {
         if (Application.isPlaying == false) return;
@@ -32,9 +25,10 @@ public class TimelineDialogueBehaviour : PlayableBehaviour
         
         InitializeDialogue(playable, info);
 
-        // TODO: Show Dialogue
-
-        _scenarioController.OnDialogueShowed?.Invoke(_champID, _scenarioController.GetDialogueLocalizationKey(_dialogueID));
+        var dialogue = _scenarioController.scenario.dialogues[dialogueIndex];
+        
+        _scenarioController.dialogueUIController.ShowDialogue(new [] {dialogue}, true, () => { EndDialogue();});
+        _scenarioController.OnDialogueShowed?.Invoke(dialogue.name, dialogue.dialogue);
         _isPlaying = true;
     }
 
@@ -57,16 +51,6 @@ public class TimelineDialogueBehaviour : PlayableBehaviour
 
         _startTime = startTime;
         _endTime = endTime;
-    }
-
-    public void SetChampID(int champID)
-    {
-        _champID = $"{champID:000}";
-    }
-
-    public void SetDialogueID(int dialogueID)
-    {
-        _dialogueID = dialogueID;
     }
 
     public void EndDialogue()
@@ -108,13 +92,5 @@ public class TimelineDialogueBehaviour : PlayableBehaviour
     private PlayableDirector GetPlayableDirector(Playable playable)
     {
         return playable.GetGraph().GetResolver() as PlayableDirector;
-    }
-
-    private Sprite GetChampSprite()
-    {
-        var imageName = $"CHAMP_{_champID}";
-        var sprites = Resources.LoadAll<Sprite>($"Delusion/Assets/Sprites/Icons/{imageName}");
-        
-        return sprites?[1];
     }
 }

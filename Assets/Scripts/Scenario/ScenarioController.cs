@@ -4,6 +4,8 @@ using UnityEngine.Playables;
 
 public class ScenarioController: MonoBehaviour
 {
+    public ScenarioScriptableObject scenario;
+    
     public DialogueUIController dialogueUIController;
         
     private PlayableDirector _director = null;
@@ -52,10 +54,5 @@ public class ScenarioController: MonoBehaviour
         }       
 
         OnScenarioEnd = null;
-    }
-
-    public virtual string GetDialogueLocalizationKey(int dialogueID)
-    {
-        return null;
     }
 }

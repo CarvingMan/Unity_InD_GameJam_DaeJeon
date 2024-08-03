@@ -20,14 +20,20 @@ public class DialogueUIController : MonoBehaviour
 
     private Dialogue[] _textsToShow;
     private int _dialogueIndex = 0;
+
+    private bool _isTimeline = false;
+    private Action _closeAction;
     
-    public void ShowDialogue(Dialogue[] texts)
+    public void ShowDialogue(Dialogue[] texts, bool isTimeline=false, Action closeAction=null)
     {
         _textsToShow = texts;
         
         _dialogueIndex = 0;
         content.SetActive(true);
         SetCurrentText();
+
+        _isTimeline = isTimeline;
+        _closeAction = closeAction;
     }
 
     public void CloseDialogue()
@@ -43,7 +49,8 @@ public class DialogueUIController : MonoBehaviour
 
             if (_dialogueIndex >= _textsToShow.Length)
             {
-                CloseDialogue();
+                if (_isTimeline == false) CloseDialogue();
+                else _closeAction?.Invoke();
                 return;
             }
 
