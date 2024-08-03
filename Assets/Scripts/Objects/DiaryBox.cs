@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 namespace Game
@@ -9,13 +10,8 @@ namespace Game
         [SerializeField]
         GameObject m_objTextBox = null;
 
-
-        //박스가 열렸을때
-        bool m_isBoxOpen = false;
-
-        [SerializeField]
-        Sprite m_spOpenBox = null;
-
+        //[SerializeField]
+        //GameObject m_objBox = null;
 
 
         private void Start()
@@ -28,11 +24,20 @@ namespace Game
             {
                 Debug.LogError("m_objTextBox가 없습니다.");
             }
+
+            /*if (m_objBox != null)
+            {
+                m_objBox.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("m_objBox가 없습니다.");
+            }*/
         }
 
         protected override void DoInteract()
         {
-            Debug.Log("INTERACT!!!");
+            //m_objBox.SetActive(true);
         }
 
         public override void OnMouseHoverEnter()
