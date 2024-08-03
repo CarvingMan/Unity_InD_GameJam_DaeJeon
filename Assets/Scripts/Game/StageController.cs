@@ -142,16 +142,16 @@ public class StageController: MonoBehaviour
     }
 
 
-    IEnumerator ShowWindow()
-    {
+    //IEnumerator ShowWindow()
+    //{
 
-        m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trWindow;
-        yield return new WaitForSeconds(3f);
+    //    m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trWindow;
+    //    yield return new WaitForSeconds(3f);
 
 
 
-        m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trPlayer;
+    //    m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trPlayer;
 
-        yield break; 
-    }
+    //    yield break; 
+    //}
 }
