@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using Cinemachine;
 using UnityEngine.Serialization;
 
 public class StageController: MonoBehaviour
@@ -20,6 +21,14 @@ public class StageController: MonoBehaviour
 
     public bool IsStageClear => _stageClear;
 
+    
+    [SerializeField]
+    GameObject m_objPlayerCamera = null;
+    [SerializeField]
+    Transform m_trWindow = null;
+    [SerializeField]
+    Transform m_trPlayer = null;
+
     private void Start()
     {
         StartStage();
@@ -34,6 +43,7 @@ public class StageController: MonoBehaviour
             
             HandleStage2Clear();
         };
+
     }
 
     public void StartStage()
@@ -131,4 +141,17 @@ public class StageController: MonoBehaviour
         
     }
 
+
+    IEnumerator ShowWindow()
+    {
+
+        m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trWindow;
+        yield return new WaitForSeconds(3f);
+
+
+
+        m_objPlayerCamera.GetComponent<CinemachineVirtualCamera>().Follow = m_trPlayer;
+
+        yield break; 
+    }
 }
