@@ -1,35 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Teadbear : InteractiveObject
 {
     [SerializeField]
-    private GameObject m_cleanImageObject; // Å¬¸°ÇÑ ÀÌ¹ÌÁö ¿ÀºêÁ§Æ®
+    private GameObject m_cleanImageObject; // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     [SerializeField]
-    private Sprite m_cleanImageSprite; // Å¬¸°ÇÑ ÀÌ¹ÌÁö ½ºÇÁ¶óÀÌÆ®
+    private Sprite m_cleanImageSprite; // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     [SerializeField]
     private Camera m_camera = null;
 
-    // ÇÃ·¹ÀÌ¾î Á¦¾î¿ë ½ºÅ©¸³Æ® º¯¼ö
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
     private PlayerControl m_csPlayerControl = null;
 
 
-    private SpriteRenderer m_spriteRenderer; // SpriteRenderer º¯¼ö
+    private Image m_image; // SpriteRenderer ï¿½ï¿½ï¿½ï¿½
 
     private void Start()
     {
 
         if (m_cleanImageObject != null)
         {
-            m_spriteRenderer = m_cleanImageObject.GetComponent<SpriteRenderer>();
-            m_cleanImageObject.SetActive(false); // ÃÊ±â »óÅÂ¿¡¼­ ºñÈ°¼ºÈ­
+            m_image = m_cleanImageObject.GetComponent<Image>();
+            m_cleanImageObject.SetActive(false); // ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
         }
         else
         {
-            Debug.LogError("m_cleanImageObject°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_cleanImageObjectï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if (m_csPlayerControl == null)
@@ -51,14 +52,14 @@ public class Teadbear : InteractiveObject
 
         if (m_cleanImageObject != null)
         {
-            // Å×µðº£¾î ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
+            // ï¿½×µðº£¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
             gameObject.SetActive(false);
 
-            // Å¬¸°ÇÑ ÀÌ¹ÌÁö ¿ÀºêÁ§Æ® È°¼ºÈ­ ¹× ÀÌ¹ÌÁö ¼³Á¤
+            // Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             m_cleanImageObject.SetActive(true);
-            if (m_spriteRenderer != null && m_cleanImageSprite != null)
+            if (m_image != null && m_cleanImageSprite != null)
             {
-                m_spriteRenderer.sprite = m_cleanImageSprite; // ÀÌ¹ÌÁö ½ºÇÁ¶óÀÌÆ® ¼³Á¤
+                m_image.sprite = m_cleanImageSprite; // ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
             }
         }
     }

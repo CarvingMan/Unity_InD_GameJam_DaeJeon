@@ -1,42 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// ÀÏ±âÀå ¹Ú½º¸¦ Å¬¸¯½Ã È­¸é Áß¾Ó¿¡ ¹Ú½º°¡ È®´ëµÇ¾î Å¬¸¯ÇÏ¸ç ÀÏ±âÀåÀ» È®ÀÎÇÑ´Ù. °ü·Ã ½ºÅ©¸³Æ®
-// »óÀÚ È­¸é È®´ë ¡æ »óÀÚ¿­¸² ¡æ ÀÏ±âÀå ¿­¸² ¡æ ´Ù½Ã ÀüÃ¼ 3ÀÎÄª ¹è°æ
+// ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ ï¿½ß¾Ó¿ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ È®ï¿½ï¿½Ç¾ï¿½ Å¬ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ñ´ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®
+// ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ È®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½Ã¼ 3ï¿½ï¿½Äª ï¿½ï¿½ï¿½
 public class BoxDiaryWindow : InteractiveObject
 {
-    SpriteRenderer m_spriteRenderer = null;
-    [SerializeField]
-    List<Sprite> m_lstSprites = new List<Sprite>(); //ÀÌ¹ÌÁö ÀüÈ¯ ½ºÇÁ¶óÀÌÆ®
+    Image m_image = null;
+    public GameObject boxWithBook;
+    public GameObject diary;
 
-    [SerializeField]
-    GameObject m_objDiaryTextPanel = null;
-
-    int m_nIndex = 0;
-    int m_nMaxIndex = 0;
-
-    //ÇÃ·¹ÀÌ¾î Á¦¾î¿ë ½ºÅ©¸³Æ®
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®
     PlayerControl m_csPlayerControl = null;
 
     private void Start()
     {
-        if (m_spriteRenderer == null)
+        if (m_image == null)
         {
-            m_spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-        m_spriteRenderer.sprite = m_lstSprites[m_nIndex];
-
-        m_nMaxIndex = m_lstSprites.Count - 1;
-
-        if (m_objDiaryTextPanel != null)
-        {
-            m_objDiaryTextPanel.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("m_objDiaryTextPanelÀÌ ¾ø½À´Ï´Ù.");
+            m_image = GetComponent<Image>();
         }
 
         if (m_csPlayerControl == null)
@@ -45,39 +29,18 @@ public class BoxDiaryWindow : InteractiveObject
         }
     }
 
-    //Å¬¸¯½Ã Diary Canvas Active
+    private void OnEnable()
+    {
+        boxWithBook.SetActive(true);
+        diary.SetActive(false);
+    }
+
     protected override void DoInteract()
     {
+        boxWithBook.SetActive(false);
+        diary.SetActive(true);
 
-        if (m_nIndex + 1 <= m_nMaxIndex) //ÀÌ¹øÀÌ ¸¶Áö¸· ½ºÇÁ¶óÀÌÆ®°¡ ¾Æ´Ò ½Ã
-        {
-            m_nIndex++; // ÀÎµ¦½º Áõ°¡
-            m_spriteRenderer.sprite = m_lstSprites[m_nIndex]; // ÀÌ¹ÌÁö ¼Ò½º º¯°æ
-        }
-        else //¸¶Áö¸· ½ºÇÁ¶óÀÌÆ®ÀÏ ½Ã
-        {
-            m_csPlayerControl.SetPlayerStop(false);
-            m_nIndex = 0; //ÀÎµ¦½º ÃÊ±âÈ­
-            m_spriteRenderer.sprite = m_lstSprites[m_nIndex];
-            gameObject.SetActive(false); // ´Ù½Ã ºñ È°¼ºÈ­
-        }
-    }
-
-    public override void OnMouseHoverEnter()
-    {
-        base.OnMouseHoverEnter();
-        if (m_objDiaryTextPanel.activeSelf == false && m_nIndex == m_lstSprites.Count - 1) // ¸¶Áö¸· ÀÎµ¦½º ÀÏ¶§
-        {
-            m_objDiaryTextPanel.SetActive(true);
-        }
-    }
-
-    public override void OnMouseHoverExit()
-    {
-        base.OnMouseHoverExit();
-        if (m_objDiaryTextPanel.activeSelf == true)
-        {
-            m_objDiaryTextPanel.SetActive(false);
-        }
+        var stageController = FindObjectOfType<StageController>();
+        stageController.UpdateDiaryFound("box");
     }
 }

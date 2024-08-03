@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMouseController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMouseController : MonoBehaviour
     [SerializeField] private Camera camera;
     
     private float _timer = 0;
+    private bool isActive = true;
 
     public Action<RaycastHit2D> OnMouseHover;
     public Action<RaycastHit2D> OnMouseClick;
@@ -30,11 +32,19 @@ public class PlayerMouseController : MonoBehaviour
         
         var mousePosition = Input.mousePosition;
         var ray = camera.ScreenPointToRay(mousePosition);
-        //레이어 마스크로 props 레이어만 맞추도록 설정
-        int nLayerMask = 1 << LayerMask.NameToLayer("Props"); 
-        var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f,nLayerMask);
-        OnMouseHover?.Invoke(raycastHit2D);
+        // bool isOverUI = EventSystem.current.IsPointerOverGameObject();
+        //
+        // if (isOverUI)
+        // {
+        //     Debug.Log(EventSystem.current.gameObject.name);
+        //     return;
+        // }
 
+        int nLayerMask = 1 << LayerMask.NameToLayer("Props");
+        
+        var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f,nLayerMask);
+        
+        OnMouseHover?.Invoke(raycastHit2D);
         _timer = 0;
     }
 
@@ -43,11 +53,15 @@ public class PlayerMouseController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             var mousePosition = Input.mousePosition;
+            
+            // bool isOverUI = UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+            // if (isOverUI) return;
             var ray = camera.ScreenPointToRay(mousePosition);
-            //레이어 마스크로 props 레이어만 맞추도록 설정
             int nLayerMask = 1 << LayerMask.NameToLayer("Props");
             var raycastHit2D = Physics2D.Raycast(ray.origin, ray.direction,20f, nLayerMask);
             OnMouseClick?.Invoke(raycastHit2D);
         }
     }
+
+    
 }
