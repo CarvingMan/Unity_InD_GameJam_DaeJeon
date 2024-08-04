@@ -10,10 +10,18 @@ public class UIManager : Singleton<UIManager>
     public ScreenTransition screenTransition;
 
     public Image teddyBearImage;
+    public Image CountImage;
+
+    public Sprite[] numSprites;
     
     public void ShowTeddyBear()
     {
         teddyBearImage.gameObject.SetActive(true);
     }
-    
+
+    public void ChangeCount(int index)
+    {
+        CountImage.sprite = numSprites[index];
+    }
+
 }
