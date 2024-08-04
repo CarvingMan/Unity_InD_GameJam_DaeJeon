@@ -7137,6 +7137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   maxDiaryCount: 4
+  m_objPlayerCamera: {fileID: 0}
+  m_trWindow: {fileID: 0}
+  m_trPlayer: {fileID: 0}
 --- !u!4 &1120276678
 Transform:
   m_ObjectHideFlags: 0
