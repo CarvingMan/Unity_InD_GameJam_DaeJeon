@@ -7,6 +7,7 @@ using Game;
 
 public class password : MonoBehaviour
 {
+    public AudioClip clip;
     [SerializeField]
     private Image[] objects; // ������Ʈ �迭
     private int[] passwordArray; // �н����� �迭
@@ -40,6 +41,7 @@ public class password : MonoBehaviour
     // Ŭ�� �� ȣ��� �޼ҵ� - ���� ���
     public void ToggleColor(int index)
     {
+        SoundManager.Instance.PlayEffect(clip);
         var image = objects[index];
         var color = image.color;
 

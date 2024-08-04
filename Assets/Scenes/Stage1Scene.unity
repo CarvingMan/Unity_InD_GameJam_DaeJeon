@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 26810351}
   - component: {fileID: 26810350}
   - component: {fileID: 26810349}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574bab1e40f7d084e985cb2b563beddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objTextBox: {fileID: 400752967}
   m_objDiaryWindow: {fileID: 1610402105}
   m_camera: {fileID: 1419650256}
@@ -698,7 +699,7 @@ GameObject:
   - component: {fileID: 106901977}
   - component: {fileID: 106901979}
   - component: {fileID: 106901978}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaryContent1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1161,7 @@ GameObject:
   - component: {fileID: 229570413}
   - component: {fileID: 229570415}
   - component: {fileID: 229570414}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaryContent3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1720,7 @@ GameObject:
   - component: {fileID: 319601980}
   - component: {fileID: 319601982}
   - component: {fileID: 319601981}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1893,7 @@ GameObject:
   - component: {fileID: 367652922}
   - component: {fileID: 367652924}
   - component: {fileID: 367652923}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,7 +2390,7 @@ GameObject:
   - component: {fileID: 428124993}
   - component: {fileID: 428124992}
   - component: {fileID: 428124991}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +3007,7 @@ GameObject:
   - component: {fileID: 524939188}
   - component: {fileID: 524939190}
   - component: {fileID: 524939189}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3144,7 +3145,7 @@ GameObject:
   - component: {fileID: 528213516}
   - component: {fileID: 528213514}
   - component: {fileID: 528213518}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: LockCloset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3183,6 +3184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52c534da9d9a704fa25eeae54ba977a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objLock: {fileID: 580950258}
   m_camera: {fileID: 1419650256}
   m_closet: {fileID: 1883742755}
@@ -3627,7 +3629,7 @@ GameObject:
   - component: {fileID: 580950261}
   - component: {fileID: 580950260}
   - component: {fileID: 580950259}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: LockPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4007,7 +4009,7 @@ GameObject:
   - component: {fileID: 613599760}
   - component: {fileID: 613599762}
   - component: {fileID: 613599761}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: teadbear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4045,6 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d78b77b5e40d61418db7d28f9261e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_cleanImageObject: {fileID: 1444143295}
   m_cleanImageSprite: {fileID: -1945709499, guid: 4dc8f9e3f4e57433388002f249b9fda3, type: 3}
   m_camera: {fileID: 1419650256}
@@ -4507,7 +4510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650653196}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4548,7 +4551,7 @@ GameObject:
   - component: {fileID: 661572227}
   - component: {fileID: 661572226}
   - component: {fileID: 661572225}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,7 +4926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717210277}
   - component: {fileID: 717210278}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5228,7 +5231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754186714}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaryWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5368,6 +5371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 9136191724911887972, guid: c9ab5101bde074484b6639f0f0d90227, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5400,7 +5407,7 @@ GameObject:
   - component: {fileID: 777643746}
   - component: {fileID: 777643748}
   - component: {fileID: 777643747}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5535,7 +5542,7 @@ GameObject:
   - component: {fileID: 785493350}
   - component: {fileID: 785493349}
   - component: {fileID: 785493348}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 'num 1 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5826,7 +5833,7 @@ GameObject:
   - component: {fileID: 886493852}
   - component: {fileID: 886493851}
   - component: {fileID: 886493850}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5930,7 +5937,7 @@ GameObject:
   - component: {fileID: 891928702}
   - component: {fileID: 891928704}
   - component: {fileID: 891928703}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: DiaryWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5969,6 +5976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322bd7ce7843f90418d4da9e29222e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objDiaryPanel: {fileID: 1028321210}
 --- !u!114 &891928703
 MonoBehaviour:
@@ -6096,7 +6104,7 @@ GameObject:
   - component: {fileID: 921652458}
   - component: {fileID: 921652460}
   - component: {fileID: 921652459}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6142,6 +6150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4300bd9d2395fb94c8192c23ae230bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: fb74e4313dd1d42b59a937554832f664, type: 3}
   objects:
   - {fileID: 785493349}
   - {fileID: 26810350}
@@ -6205,7 +6214,7 @@ GameObject:
   - component: {fileID: 924843863}
   - component: {fileID: 924843862}
   - component: {fileID: 924843861}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6606,7 +6615,7 @@ GameObject:
   - component: {fileID: 1028321211}
   - component: {fileID: 1028321213}
   - component: {fileID: 1028321212}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6683,7 +6692,7 @@ GameObject:
   - component: {fileID: 1038935524}
   - component: {fileID: 1038935523}
   - component: {fileID: 1038935522}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: DiaryWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6891,6 +6900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7099a32e434884f46b042918cf2c833e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objDiaryPanel: {fileID: 229570412}
 --- !u!1 &1062055990
 GameObject:
@@ -7137,9 +7147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 1
   maxDiaryCount: 4
-  m_objPlayerCamera: {fileID: 0}
-  m_trWindow: {fileID: 0}
-  m_trPlayer: {fileID: 0}
 --- !u!4 &1120276678
 Transform:
   m_ObjectHideFlags: 0
@@ -7251,7 +7258,7 @@ GameObject:
   - component: {fileID: 1137450719}
   - component: {fileID: 1137450718}
   - component: {fileID: 1137450717}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7622,6 +7629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7099a32e434884f46b042918cf2c833e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objDiaryPanel: {fileID: 1375585317}
 --- !u!114 &1174300234
 MonoBehaviour:
@@ -9160,7 +9168,7 @@ GameObject:
   - component: {fileID: 1349671424}
   - component: {fileID: 1349671426}
   - component: {fileID: 1349671425}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9235,7 +9243,7 @@ GameObject:
   - component: {fileID: 1365732706}
   - component: {fileID: 1365732708}
   - component: {fileID: 1365732707}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9401,6 +9409,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f84f4018370b495d8eef199ecbf536d, type: 3}
+    - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
       propertyPath: m_objDiaryWindow
       value: 
       objectReference: {fileID: 2073716310}
@@ -9469,7 +9481,7 @@ GameObject:
   - component: {fileID: 1375585318}
   - component: {fileID: 1375585320}
   - component: {fileID: 1375585319}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaryContent4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9913,7 +9925,7 @@ GameObject:
   - component: {fileID: 1519543377}
   - component: {fileID: 1519543376}
   - component: {fileID: 1519543375}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10289,6 +10301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322bd7ce7843f90418d4da9e29222e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objDiaryPanel: {fileID: 106901976}
 --- !u!1 &1609479957
 GameObject:
@@ -10425,6 +10438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2e557a70a656043851cd7955cc6e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 0f84f4018370b495d8eef199ecbf536d, type: 3}
   boxWithBook: {fileID: 1038935518}
   diary: {fileID: 1540790504}
 --- !u!1 &1615618929
@@ -10439,7 +10453,7 @@ GameObject:
   - component: {fileID: 1615618933}
   - component: {fileID: 1615618932}
   - component: {fileID: 1615618931}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10887,7 +10901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646763451}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: LockCloset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11012,6 +11026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bf3bde984536a459f64877d4e31419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: d70bfc31ea44d4e5d9371602751b0330, type: 3}
   StageController: {fileID: 1120276677}
   m_objTextBookbag: {fileID: 927160459}
   m_openedBag: {fileID: 1745148929}
@@ -11405,6 +11420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861e7b89caa8f17449ac3e73c36e04b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 498eeb47df373427dab8452db34a7e2f, type: 3}
+  dropSound: {fileID: 8300000, guid: 4d6ecc14fe93e4e05b7d7a3f60efba16, type: 3}
   m_objTextBox: {fileID: 348153595}
   m_spOpenDoor: {fileID: 1505939967, guid: 7bffc12b4534f4d66b049bd806df2fe1, type: 3}
   m_objDiary: {fileID: 1265819616}
@@ -11510,7 +11527,7 @@ GameObject:
   - component: {fileID: 1718875905}
   - component: {fileID: 1718875904}
   - component: {fileID: 1718875903}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12299,6 +12316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef847bd9d8374a68ab1b4ea5981c78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 2386652e5d8c642e1b4bba855162bb62, type: 3}
   stageController: {fileID: 1120276677}
 --- !u!1 &1809555698
 GameObject:
@@ -12313,7 +12331,7 @@ GameObject:
   - component: {fileID: 1809555706}
   - component: {fileID: 1809555705}
   - component: {fileID: 1809555704}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Diary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12351,6 +12369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02178c8feb122aa4685329016fb0ba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 0f84f4018370b495d8eef199ecbf536d, type: 3}
   m_objTextBox: {fileID: 717210276}
   m_objDiaryWindow: {fileID: 754186713}
   m_camera: {fileID: 1419650256}
@@ -12461,7 +12480,7 @@ GameObject:
   - component: {fileID: 1830209760}
   - component: {fileID: 1830209759}
   - component: {fileID: 1830209758}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: num6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12795,6 +12814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d20de2585856549b6c12308a295298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 498eeb47df373427dab8452db34a7e2f, type: 3}
   m_objTextCloset: {fileID: 402174504}
   m_objCloset: {fileID: 1646763450}
   m_camera: {fileID: 1419650256}
@@ -13645,7 +13665,7 @@ GameObject:
   - component: {fileID: 2013505922}
   - component: {fileID: 2013505924}
   - component: {fileID: 2013505923}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: DiaryTextPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13917,7 +13937,7 @@ GameObject:
   - component: {fileID: 2131482804}
   - component: {fileID: 2131482806}
   - component: {fileID: 2131482805}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
