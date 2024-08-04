@@ -96,7 +96,7 @@ public class password : MonoBehaviour
         // ��� ��� (����� �޽����� Ȯ��)
         if (isCorrect)
         {
-            Debug.Log("�н����尡 ��ġ�մϴ�!");
+            Debug.Log("Unlock");
             lockObject.Unlock(); // �н����尡 ��ġ�ϸ� Unlock �޼ҵ� ȣ��
 
             // LockCloset�� �̹��� ����

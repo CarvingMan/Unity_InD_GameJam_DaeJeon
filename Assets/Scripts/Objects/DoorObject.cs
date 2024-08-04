@@ -53,7 +53,7 @@ public class DoorObject : InteractiveObject
         var tween = UIManager.Instance.screenTransition.FadeOut(2);
         yield return new WaitWhile(() => tween.IsPlaying());
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Stage2Scene");
     }
 
     private void OnStageClear()

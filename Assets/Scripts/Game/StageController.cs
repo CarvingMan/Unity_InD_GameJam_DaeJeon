@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class StageController: MonoBehaviour
@@ -21,6 +23,8 @@ public class StageController: MonoBehaviour
 
     public bool IsStageClear => _stageClear;
 
+    public PlayableDirector director;
+
     
     //[SerializeField]
     //GameObject m_objPlayerCamera = null;
@@ -34,7 +38,7 @@ public class StageController: MonoBehaviour
         StartStage();
         OnDiaryFound += (int index) =>
         {
-            Debug.Log($"Found Diaries: {index}");
+            UIManager.Instance.ChangeCount(index);
         };
 
         OnStageClear += () =>
@@ -132,13 +136,15 @@ public class StageController: MonoBehaviour
 
     private void HandleStage2Clear()
     {
-        // SoundManager.Instance.PlayEffect(SoundEffectEnum.Tick);
-        
-        // TODO: 카메라가 -> 포커스를 창가로 움직이고
-        // TODO: Dotween 써서 알파 값 바꾸는거 -> 창이 나와서
-        // TODO: 고양이 창이 생기기
-        // TODO: 고양이 창 누르면 => 확대창 (UI)
-        
+        StartCoroutine(StartEnding());
+    }
+
+    private IEnumerator StartEnding()
+    {
+        director.Play();
+        yield return new WaitWhile(() => director.state == PlayState.Playing);
+
+        SceneManager.LoadScene(3);
     }
 
 }
