@@ -349,9 +349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02178c8feb122aa4685329016fb0ba17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objTextBox: {fileID: 6915238133504574980}
   m_objDiaryWindow: {fileID: 6291998010784348338}
   m_camera: {fileID: 0}
+  isCupboard: 0
 --- !u!1 &2767726333605618688
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322bd7ce7843f90418d4da9e29222e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffect: {fileID: 0}
   m_objDiaryPanel: {fileID: 4517500187140363656}
 --- !u!1 &6915238133504574980
 GameObject:
