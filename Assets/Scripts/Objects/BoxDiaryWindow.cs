@@ -13,6 +13,8 @@ public class BoxDiaryWindow : InteractiveObject
     public GameObject boxWithBook;
     public GameObject diary;
 
+    public string content;
+
     //�÷��̾� ����� ��ũ��Ʈ
     PlayerControl m_csPlayerControl = null;
 
@@ -48,5 +50,7 @@ public class BoxDiaryWindow : InteractiveObject
         m_csPlayerControl.SetPlayerStop(false);
 
         stageController.UpdateDiaryFound("box");
+        
+        FindObjectOfType<DiaryBook>().OpenDiary(content);
     }
 }

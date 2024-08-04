@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandler
 {
@@ -16,10 +17,15 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
 
     bool m_isRedy = false; //�غ� �Ǿ��� ������ Ŭ���� �����ϴ�.
 
+    public string content;
+
     //�÷��̾� �����
     PlayerControl m_csPlayerControl;
 
     public bool isCupboard;
+    public bool isCat;
+
+    public Button closeButton;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +49,16 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
             m_csPlayerControl = FindObjectOfType<PlayerControl>();
         }
 
+        if (isCat)
+        {
+            closeButton.onClick.AddListener(() =>
+            {
+                if (isCat)
+                {
+                    stageController.UpdateDiaryFound("cat");
+                }
+            });
+        }
     }
 
     //Ŭ���� Diary Canvas Active
@@ -54,6 +70,8 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
             if (m_camera != null)
             {
                 m_objDiaryWindow.SetActive(true);
+                var book = FindObjectOfType<DiaryBook>();
+                book.OpenDiary(content);
                 m_csPlayerControl.SetPlayerStop(true);
 
                 if (stageController == null)
@@ -66,6 +84,10 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
                 if (isCupboard)
                 {
                     stageController.UpdateDiaryFound("cupboard");
+                }
+                else if (isCat)
+                {
+                    
                 }
                 else
                 {

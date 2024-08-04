@@ -21,6 +21,8 @@ public class UIManager : Singleton<UIManager>
 
     public void ChangeCount(int index)
     {
+        if (CountImage == null) return;
+        if (index >= numSprites.Length) return;
         CountImage.sprite = numSprites[index];
     }
 

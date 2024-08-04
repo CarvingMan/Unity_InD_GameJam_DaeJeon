@@ -7583,7 +7583,7 @@ MonoBehaviour:
   CountImage: {fileID: 1479666795}
   numSprites:
   - {fileID: -625493387, guid: aa46905ef6dbf4972a1fd2f9b2dcec3b, type: 3}
-  - {fileID: 0}
+  - {fileID: -89309061, guid: 174ca912b44004e868b83379deabbbce, type: 3}
   - {fileID: 2020690395, guid: 6fa004cb1c89c47bb822764351a74bfa, type: 3}
   - {fileID: -577985667, guid: 49a43fa2793694eea9a682e462aeae06, type: 3}
   - {fileID: -2069186157, guid: ba9bf5a6d2cbc484db8a1bb11ec0f86d, type: 3}
