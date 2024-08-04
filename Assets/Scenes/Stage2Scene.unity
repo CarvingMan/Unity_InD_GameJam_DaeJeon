@@ -1255,8 +1255,8 @@ GameObject:
   m_Component:
   - component: {fileID: 330840668}
   - component: {fileID: 330840669}
-  - component: {fileID: 330840670}
   - component: {fileID: 330840671}
+  - component: {fileID: 330840672}
   m_Layer: 6
   m_Name: Closet
   m_TagString: Untagged
@@ -1274,7 +1274,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.6, y: 2.42, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 178785151}
@@ -1320,18 +1320,34 @@ SpriteRenderer:
   m_SortingLayerID: 1303756099
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63274865182d8534aa9359d9b981fef0, type: 3}
+  m_Sprite: {fileID: -1923458031, guid: 867e2e8fe884047568d2735b0295bf01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.6, y: 5.4}
+  m_Size: {x: 0.62, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &330840670
+--- !u!114 &330840671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330840667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6490f803a06fecb489144c5c619527d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 498eeb47df373427dab8452db34a7e2f, type: 3}
+  m_objTextBox: {fileID: 484284222}
+  m_objClosetWindow: {fileID: 2013684573}
+  m_camera: {fileID: 1419650256}
+--- !u!61 &330840672
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1360,38 +1376,22 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043478608, y: 0.101448774}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.6, y: 5.4}
-    newSize: {x: 9.6, y: 5.4}
+    oldSize: {x: 0.62, y: 0.72}
+    newSize: {x: 0.62, y: 0.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9478414, y: 4.385511}
+  m_Size: {x: 0.62, y: 0.72}
   m_EdgeRadius: 0
---- !u!114 &330840671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330840667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6490f803a06fecb489144c5c619527d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundEffect: {fileID: 8300000, guid: 498eeb47df373427dab8452db34a7e2f, type: 3}
-  m_objTextBox: {fileID: 484284222}
-  m_objClosetWindow: {fileID: 2013684573}
-  m_camera: {fileID: 1419650256}
 --- !u!1 &375988612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +3491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffect: {fileID: 8300000, guid: 0f84f4018370b495d8eef199ecbf536d, type: 3}
+  isStage1: 0
   boxWithBook: {fileID: 1399755720}
   diary: {fileID: 1930456578}
   tmp: {fileID: 774710606}
@@ -5526,6 +5527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffect: {fileID: 0}
+  isStage1: 0
   boxWithBook: {fileID: 670692479}
   diary: {fileID: 1725106296}
   tmp: {fileID: 0}
@@ -7757,6 +7759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 2
   maxDiaryCount: 3
+  image: {fileID: 816885231}
   director: {fileID: 126594074}
 --- !u!4 &1381111684
 Transform:

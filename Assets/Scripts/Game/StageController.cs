@@ -7,6 +7,7 @@ using Cinemachine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class StageController: MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class StageController: MonoBehaviour
 
     public Action OnStageClear;
     public Action<int> OnDiaryFound;
+
+    public Image image;
 
     public bool IsStageClear => _stageClear;
 
@@ -143,6 +146,9 @@ public class StageController: MonoBehaviour
     {
         director.Play();
         yield return new WaitWhile(() => director.state == PlayState.Playing);
+        var color = image.color;
+        color.a = 1;
+        image.color = color;
 
         SceneManager.LoadScene(3);
     }
