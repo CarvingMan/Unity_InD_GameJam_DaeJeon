@@ -30,19 +30,12 @@ public class SoundManager: Singleton<SoundManager>
     private void Start()
     {
         Initialize();
+        
+        DontDestroyOnLoad(this);
     }
 
-    public void PlayEffect(SoundEffectEnum soundEffectEnum)
+    public void PlayEffect(AudioClip clip)
     {
-        int soundEffectIndex = (int)soundEffectEnum;
-
-        if (soundEffectIndex >= audioClips.Length)
-        {
-            Debug.LogError("Invalid Index");
-            return;
-        }
-
-        var clip = audioClips[soundEffectIndex];
         StartCoroutine(PlayClip(clip));
     }
     

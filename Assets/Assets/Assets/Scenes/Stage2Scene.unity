@@ -776,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5620617124404824005, guid: c9ab5101bde074484b6639f0f0d90227, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -225.5549
       objectReference: {fileID: 0}
     - target: {fileID: 5620617124404824005, guid: c9ab5101bde074484b6639f0f0d90227, type: 3}
       propertyPath: m_SizeDelta.y
@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5620617124404824005, guid: c9ab5101bde074484b6639f0f0d90227, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.19000244
+      value: -112.78
       objectReference: {fileID: 0}
     - target: {fileID: 5620617124404824005, guid: c9ab5101bde074484b6639f0f0d90227, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7475,7 +7475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -737.5, y: 437.5}
+  m_AnchoredPosition: {x: 734, y: -423}
   m_SizeDelta: {x: -1525, y: -925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466444644
@@ -7665,6 +7665,10 @@ PrefabInstance:
     - target: {fileID: 2673322627195730026, guid: 5badb53c375397d4f855beb877861e15, type: 3}
       propertyPath: m_Name
       value: DiaryPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3536040548214457731, guid: 5badb53c375397d4f855beb877861e15, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6291998010784348338, guid: 5badb53c375397d4f855beb877861e15, type: 3}
       propertyPath: m_IsActive
@@ -9056,7 +9060,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1737280474
 GameObject:

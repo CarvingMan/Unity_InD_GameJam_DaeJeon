@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class InteractiveObject: MonoBehaviour
 {
+    public AudioClip soundEffect;
+    
     protected StageController stageController;
     protected bool isInteractable;
     protected bool isInteracted;
@@ -15,15 +17,20 @@ public abstract class InteractiveObject: MonoBehaviour
 
     public virtual void Interact()
     {
-        //Å¬¸¯ÇÒ¶§ ¿À·ù°¡ ³ª¼­ ¿ì¼±Àº ÁÖ¼®Ã³¸® ÇØ µÎ¾ú½À´Ï´Ù!
+        //Å¬ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ ï¿½Ö¼ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ ï¿½Î¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!
 
         //if (initialized == false)
         //{
         //    Debug.LogError($"{this.gameObject.name} not initialized");
         //    return;
         //}
-
+        
         DoInteract();
+
+        if (soundEffect != null)
+        {
+            SoundManager.Instance.PlayEffect(soundEffect);
+        }
     }
 
     public virtual void Initialize(StageController stageController)

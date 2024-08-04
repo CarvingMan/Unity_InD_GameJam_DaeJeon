@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CupBoard : InteractiveObject
 {
+    public AudioClip dropSound;
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Îµå¸± ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È¿ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ü¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
 
-    //ºó¾àÇÑ º®ÀåÀ» ºü¸£°Ô 5¹ø ÀÌ»ó µÎµå¸± ½Ã ¹®ÀÌ ¿­¸®¸ç ¾È¿¡¼­ ÀÏ±âÀåÀÌ ¶³¾îÁö°í ÇØ´ç ÀÏ±âÀåÀ» ´©¸¦ ½Ã ´Ü¼­¸¦ ¾òÀ» ¼ö ÀÖ´Ù.
-
-    //¸¶¿ì½º enter½Ã º¸ÀÏ props ¼³¸í
+    //ï¿½ï¿½ï¿½ì½º enterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ props ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
     GameObject m_objTextBox = null;
 
@@ -17,16 +17,16 @@ public class CupBoard : InteractiveObject
     [SerializeField]
     GameObject m_objDiary = null;
     [SerializeField]
-    Transform m_trFallPos = null; //¹Ù´Ú¿¡ ¶³¾îÁö´Â position
+    Transform m_trFallPos = null; //ï¿½Ù´Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ position
 
 
-    //¹® ¿­¸² º¯¼öµé
+    //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     bool m_isOpen = false;
-    const int m_nOpenCount = 5; // ´Ù¼¸¹ø ÀÌ»ó µÎµå¸± ½Ã ¹®ÀÌ ¿­¸°´Ù.
-    int m_nCurrentCount = 0; //¿¬¼ÓÇØ¼­ µÎµå¸° ¼ö 1.5 ÃÊ ÈÄ¿¡ ÃÊ±âÈ­.
+    const int m_nOpenCount = 5; // ï¿½Ù¼ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Îµå¸± ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+    int m_nCurrentCount = 0; //ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Îµå¸° ï¿½ï¿½ 1.5 ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½Ê±ï¿½È­.
 
 
-    //ÄÚ·çÆ¾ °ü·Ã ¸â¹öº¯¼öµé
+    //ï¿½Ú·ï¿½Æ¾ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     bool m_isKnocking = false;
     bool m_isCounting = false;
 
@@ -39,7 +39,7 @@ public class CupBoard : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_objTextBox°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_objTextBoxï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
         if(m_objDiary != null)
@@ -48,7 +48,7 @@ public class CupBoard : InteractiveObject
         }
         else
         {
-            Debug.LogError("m_Diary°¡ ¾ø½À´Ï´Ù.");
+            Debug.LogError("m_Diaryï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
 
     }
@@ -82,52 +82,52 @@ public class CupBoard : InteractiveObject
   
 
 
-    //ÄÚ·çÆ¾µé
+    //ï¿½Ú·ï¿½Æ¾ï¿½ï¿½
 
-    //³ëÅ©ÇÏ´Â È¿°ú
+    //ï¿½ï¿½Å©ï¿½Ï´ï¿½ È¿ï¿½ï¿½
     IEnumerator CorKnocking()
     {
         if (m_isKnocking)
         {
-            yield break; //ÄÚ·çÆ¾ Áßº¹ È£Ãâ ¹æÁö
+            yield break; //ï¿½Ú·ï¿½Æ¾ ï¿½ßºï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
         else
         {
             m_isKnocking = true;
             Vector2 vecScale = transform.localScale;
-            // µÎµå¸±¶§ ½ºÄÉÀÏ¹× °¢µµ º¯È­·Î Èçµé¸®´Â ÀÎÅÍ·º¼Ç ±¸Çö
+            // ï¿½Îµå¸±ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½é¸®ï¿½ï¿½ ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             transform.localScale = new Vector2(vecScale.x + 0.1f, vecScale.y + 0.1f);
             yield return new WaitForSeconds(0.05f);
             Vector3 vecRotation = transform.rotation.eulerAngles;
             transform.Rotate(vecRotation.x, vecRotation.y, vecRotation.z + 5f);
             yield return new WaitForSeconds(0.05f);
-            // ´Ù½Ã º¹±¸
+            // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
             transform.localScale = vecScale;
             yield return new WaitForSeconds(0.05f);
             transform.rotation = Quaternion.Euler(vecRotation);
             
             m_isKnocking=false;
-            m_nCurrentCount++; // ÀÎÅÍ·º¼ÇÀÌ ³¡³ª°í µÎµå¸° È½¼ö Áõ°¡
+            m_nCurrentCount++; // ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµå¸° È½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             yield break;
         }
     }
 
-    //Á¦ÇÑ ½Ã°£ ³»¿¡ 5¹ø ÀÌ»ó µÎµå·È´ÂÁö °Ë»çÇÏ´Â ÄÚ·çÆ¾
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Îµï¿½È´ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Ï´ï¿½ ï¿½Ú·ï¿½Æ¾
     IEnumerator CorCheckKnockCount() 
     {
         if (m_isCounting)
         {
-            yield break; // ÀÌ¹Ì È£Ãâ ÁßÀÌ¸é break; ÄÚ·çÆ¾ Áßº¹ È£Ãâ ±ÝÁö
+            yield break; // ï¿½Ì¹ï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ break; ï¿½Ú·ï¿½Æ¾ ï¿½ßºï¿½ È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
         else
         {
             m_isCounting = true;
 
             yield return new WaitForSeconds(2.8f);
-            //2ÃÊ ÈÄ¿¡ µÎµå¸° È½¼ö°¡ nOpenCount ÀÌ»óÀÏ¶§
+            //2ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½Îµå¸° È½ï¿½ï¿½ï¿½ï¿½ nOpenCount ï¿½Ì»ï¿½ï¿½Ï¶ï¿½
             if(m_nCurrentCount > m_nOpenCount)
             {
-                m_isOpen = true; // ¹®¿­¸²
+                m_isOpen = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 m_nCurrentCount = 0;
                 if(m_spOpenDoor != null)
                 {
@@ -135,7 +135,7 @@ public class CupBoard : InteractiveObject
                 }
                 else
                 {
-                    Debug.LogError("m_spOpenDoor°¡ ¾ø½À´Ï´Ù.");
+                    Debug.LogError("m_spOpenDoorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
                 }
                 StartCoroutine(CorFallDiary());
@@ -144,7 +144,7 @@ public class CupBoard : InteractiveObject
             }
             else
             {
-                //Æ¯Á¤ ¼öº¸´Ù ÀûÀ» ½Ã ´Ù½Ã 0À¸·Î ÃÊ±âÈ­
+                //Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
                 m_nCurrentCount = 0;
                 m_isCounting = false;
                 yield break;
@@ -152,9 +152,10 @@ public class CupBoard : InteractiveObject
         }
     }
 
-    //ÀÏ±âÀåÀÌ ¶³¾îÁö´Â ÇÔ¼ö
+    //ï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     IEnumerator CorFallDiary()
     {
+        SoundManager.Instance.PlayEffect(dropSound);
         m_objDiary.GetComponent<ADiary>().SetDiaryRedy(false);
         m_objDiary.SetActive(true);
         yield return new WaitForSeconds(0.5f);

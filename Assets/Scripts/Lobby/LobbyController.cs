@@ -6,6 +6,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LobbyController : MonoBehaviour
 {
@@ -22,14 +23,14 @@ public class LobbyController : MonoBehaviour
     [SerializeField] private Light2D global;
     [SerializeField] private Camera cam;
 
+    public GameObject splashGO;
+    public GameObject loadingGO;
+
     private bool _introStarted = false;
     
     private void Start()
     {
-        global.gameObject.SetActive(false);
-        var color = butterfly.color;
-        color.a = 0;
-        butterfly.color = color;
+        Initialize();
     }
 
     private void Update()
@@ -116,5 +117,43 @@ public class LobbyController : MonoBehaviour
     private void LoadMain()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void Initialize()
+    {
+        global.gameObject.SetActive(false);
+        var color = butterfly.color;
+        color.a = 0;
+        butterfly.color = color;
+        
+        SoundManager.Instance.PlayBGM();
+    }
+
+    public void LoadSplash()
+    {
+        Debug.Log("start Splash");
+        StartCoroutine(LoadSplashCo());
+    }
+
+    private IEnumerator LoadSplashCo()
+    {
+        var tween = UIManager.Instance.screenTransition.FadeOut(2);
+        yield return new WaitWhile(tween.IsPlaying);
+        
+        splashGO.SetActive(false);
+        loadingGO.SetActive(true);
+        
+        tween = UIManager.Instance.screenTransition.FadeIn(2);
+        yield return new WaitWhile(tween.IsPlaying);
+        
+        tween = UIManager.Instance.screenTransition.FadeOut(2);
+        yield return new WaitWhile(tween.IsPlaying);
+        
+        loadingGO.SetActive(false);
+
+        tween = UIManager.Instance.screenTransition.FadeIn(1);
+        yield return new WaitWhile(tween.IsPlaying);
+
+        yield return StartIntroCo();
     }
 }
