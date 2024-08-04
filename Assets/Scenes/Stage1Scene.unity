@@ -8094,7 +8094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundEffect: {fileID: 8300000, guid: 2386652e5d8c642e1b4bba855162bb62, type: 3}
   stageController: {fileID: 1120276677}
-  m_TextDoor: {fileID: 0}
+  m_TextDoor: {fileID: 1362924934}
 --- !u!1 &1809555698
 GameObject:
   m_ObjectHideFlags: 0
