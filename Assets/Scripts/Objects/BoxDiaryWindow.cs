@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,11 +10,13 @@ using UnityEngine.UI;
 // ���� ȭ�� Ȯ�� �� ���ڿ��� �� �ϱ��� ���� �� �ٽ� ��ü 3��Ī ���
 public class BoxDiaryWindow : InteractiveObject
 {
+    public bool isStage1 = false;
+    
     Image m_image = null;
     public GameObject boxWithBook;
     public GameObject diary;
 
-    public string content;
+    public TextMeshProUGUI tmp;
 
     //�÷��̾� ����� ��ũ��Ʈ
     PlayerControl m_csPlayerControl = null;
@@ -50,7 +53,16 @@ public class BoxDiaryWindow : InteractiveObject
         m_csPlayerControl.SetPlayerStop(false);
 
         stageController.UpdateDiaryFound("box");
-        
-        FindObjectOfType<DiaryBook>().OpenDiary(content);
+
+        if (tmp == null) return;
+
+        if (isStage1)
+        {
+            tmp.text = "8월 4일! 오늘은 내 생일이다!\n드디어 원하던 곰인형을 선물받아서 기뻐!";
+        }
+        else
+        {
+            tmp.text = "11월 11일\n여긴 나만의 공간이야! 내가 좋아하는 것들도 옷장 안에 잔뜩 있어!";
+        }
     }
 }

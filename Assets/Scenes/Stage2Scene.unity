@@ -3490,9 +3490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2e557a70a656043851cd7955cc6e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 0f84f4018370b495d8eef199ecbf536d, type: 3}
   boxWithBook: {fileID: 1399755720}
   diary: {fileID: 1930456578}
+  tmp: {fileID: 774710606}
 --- !u!1 &670692479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +3978,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4974,6 +4975,9 @@ MonoBehaviour:
   m_objTextBox: {fileID: 927029462}
   m_objDiaryWindow: {fileID: 2032775821}
   m_camera: {fileID: 1419650256}
+  title: "12\uC6D4 29\uC77C"
+  content: "\uB0B4\uC77C\uC740 \uACE0\uC591\uC774\uAC00 \uB0A0 \uCC3E\uC544\uC640
+    \uC904\uAE4C?"
   isCupboard: 0
   isCat: 0
   closeButton: {fileID: 0}
@@ -5524,6 +5528,7 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   boxWithBook: {fileID: 670692479}
   diary: {fileID: 1725106296}
+  tmp: {fileID: 0}
 --- !u!1 &1075367482
 GameObject:
   m_ObjectHideFlags: 0
@@ -8485,6 +8490,15 @@ PrefabInstance:
     - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
       propertyPath: isCat
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
+      propertyPath: title
+      value: "12\uC6D4 31\uC77C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
+      propertyPath: content
+      value: "\uBC8C\uC368 \uB9C8\uC9C0\uB9C9 \uB0A0\uC774\uB124, \uC624\uB298\uC774
+        \uC9C0\uB098\uBA74,, \uB098\uB294 \uC5B4\uB5BB\uAC8C \uB420\uAE4C\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 8069653460057491946, guid: 5badb53c375397d4f855beb877861e15, type: 3}
       propertyPath: m_camera

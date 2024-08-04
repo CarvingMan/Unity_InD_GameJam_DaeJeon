@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Stage2Closet : InteractiveObject
@@ -13,8 +14,6 @@ public class Stage2Closet : InteractiveObject
     GameObject m_objClosetWindow = null;
     [SerializeField]
     Camera m_camera = null;
-
-
 
     //�÷��̾� �����
     PlayerControl m_csPlayerControl = null;

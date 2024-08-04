@@ -17,6 +17,7 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
 
     bool m_isRedy = false; //�غ� �Ǿ��� ������ Ŭ���� �����ϴ�.
 
+    public string title;
     public string content;
 
     //�÷��̾� �����
@@ -71,7 +72,12 @@ public class ADiary : InteractiveObject, IPointerEnterHandler, IPointerExitHandl
             {
                 m_objDiaryWindow.SetActive(true);
                 var book = FindObjectOfType<DiaryBook>();
-                book.OpenDiary(content);
+                if (book != null)
+                {
+                    book.OpenDiary($"{title}\n{content}");
+                }
+
+                
                 m_csPlayerControl.SetPlayerStop(true);
 
                 if (stageController == null)
