@@ -14,6 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - name: "\uB098\uBE44"
-    dialogue: "\uC548\uB155 \uB09C \uB098\uBE44\uC57C \uB9CC\uB098\uC11C \uBC18\uAC11\uB2E4"
-  - name: "\uC8FC\uC778\uACF5"
-    dialogue: "\uADF8\uB798 \uB9CC\uB098\uC11C \uBC18\uAC11\uB2E4"
+    dialogue: "\uC774\uC81C \uAFC8\uC5D0\uC11C \uAE70 \uC2DC\uAC04\uC774\uC57C"

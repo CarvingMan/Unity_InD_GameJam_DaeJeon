@@ -497,7 +497,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -8485103914404062528}
-    m_Duration: 44.13333333333333
+    m_Duration: 39.03333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5566448415928493518}
     m_EaseInDuration: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 7959002693154612584}
-    m_Duration: 44.13333333333333
+    m_Duration: 39.03333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4629750117505278075}
     m_EaseInDuration: 0
@@ -1703,21 +1703,6 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
---- !u!114 &173160554339975715
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fafcc2a765bbf4937b4c4a1e8d5c0c0d, type: 3}
-  m_Name: TimelineDialogueClip(Clone)
-  m_EditorClassIdentifier: 
-  template:
-    dialogueIndex: 1
-    closeDialogue: 1
 --- !u!114 &568495003143674195
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1743,75 +1728,6 @@ MonoBehaviour:
     m_Start: 26.25
     m_ClipIn: 0
     m_Asset: {fileID: 842062914787096826}
-    m_Duration: 5
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 568495003143674195}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: TimelineDialogueClip
-  - m_Version: 1
-    m_Start: 31.716666666666665
-    m_ClipIn: 0
-    m_Asset: {fileID: 173160554339975715}
     m_Duration: 5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 568495003143674195}
@@ -2003,7 +1919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     dialogueIndex: 0
-    closeDialogue: 0
+    closeDialogue: 1
 --- !u!74 &1955054500553934737
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -2726,7 +2642,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -7264415829659801341}
-    m_Duration: 40.31666666666667
+    m_Duration: 39.03333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4201817406730443092}
     m_EaseInDuration: 0
@@ -3283,7 +3199,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 36.71666666666667
+    m_Start: 31.616666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -6590112961564105392}
     m_Duration: 7.416666666666664
@@ -3291,8 +3207,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 5931425764902526311}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 7.416666666666664
-    m_BlendOutDuration: -1
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 7.416666666666664
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -3316,7 +3232,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: ScreenFaderClip
   - m_Version: 1
-    m_Start: 36.71666666666667
+    m_Start: 31.616666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 5950463054687464518}
     m_Duration: 7.416666666666664
@@ -3324,8 +3240,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 5931425764902526311}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: 7.416666666666664
+    m_BlendInDuration: 7.416666666666664
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
