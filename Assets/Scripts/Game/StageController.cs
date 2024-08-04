@@ -34,7 +34,7 @@ public class StageController: MonoBehaviour
         StartStage();
         OnDiaryFound += (int index) =>
         {
-            Debug.Log($"Found Diaries: {index}");
+            UIManager.Instance.ChangeCount(index);
         };
 
         OnStageClear += () =>
