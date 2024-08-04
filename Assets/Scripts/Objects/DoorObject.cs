@@ -9,12 +9,12 @@ public class DoorObject : InteractiveObject
 {
     [SerializeField] private StageController stageController;
 
-    [SerializeField] GameObject m_objTextDoor = null;
+    [SerializeField] private GameObject m_TextDoor = null;
     private void Start()
     {
-        if (m_objTextDoor != null)
+        if (m_TextDoor != null)
         {
-            m_objTextDoor.SetActive(false);
+            m_TextDoor.SetActive(false);
         }
         else
         {
@@ -27,13 +27,13 @@ public class DoorObject : InteractiveObject
     public override void OnMouseHoverEnter()
     {
         base.OnMouseHoverEnter();
-        m_objTextDoor.SetActive(true);
+        m_TextDoor.SetActive(true);
     }
     
     public override void OnMouseHoverExit()
     {
         base.OnMouseHoverExit();
-        m_objTextDoor.SetActive(false);
+        m_TextDoor.SetActive(false);
     }
 
     protected override void DoInteract()
